@@ -1,3 +1,8 @@
+
+*** Building the project
+Assuming that you have set up gradle in your computer type in your console:
+	$ cd hello
+	$ gradle build
 #Hello Application
 
 ###About
@@ -38,3 +43,4 @@ It is **strongly** recommended to follow this structure so as to maintain a clea
 
 ###Running the server
 The server can be easily executed by using `gradle run`, assuming Gradle has been properly set up. Then any client can connect and, if the application is working, the web will display the current date and time.
+

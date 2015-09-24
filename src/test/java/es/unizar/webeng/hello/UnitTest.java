@@ -19,6 +19,14 @@ import static org.junit.Assert.*;
  * for integration tests
  */
 @SpringApplicationConfiguration(classes = Application.class)
+/**
+* UnitTest
+*
+* Program that performs the unit test of the application 'hello'
+* Unit tests check the proper behavior of a code module to ensure
+* that each module works properly separately.
+* 
+*/
 public class UnitTest {
 
 	// Set the default value from the config file: application.properties
