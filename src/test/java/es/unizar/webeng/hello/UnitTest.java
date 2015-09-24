@@ -10,9 +10,22 @@ import java.util.HashMap;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
+/*
+* Indicates that the class should use Spring's JUnit facilities. SpringJUnit4ClassRunner is a custom extension of JUnit's BlockJUnit4ClassRunner
+* which provides functionality of the Spring TestContext Framework
+*/
 
 @RunWith(SpringJUnit4ClassRunner.class)
+/*
+* SpringApplicationConfiguration is a Class which especifies how to load and configure
+* an ApplicationContext for integration tests.
+*/
 @SpringApplicationConfiguration(classes = Application.class)
+
+/*
+* @WebAppConfiguration must be present in order to tell Spring that a WebApplicationContext should be loaded for the test
+*/
+
 public class UnitTest {
 
 	@Value("${app.message:Hello World}")
