@@ -21,6 +21,14 @@ public class Application extends SpringBootServletInitializer {
     }
     
     @Override
+   /**
+	* Overwrite configure method in order to customize 
+	* the configuration of this application.
+	* Sources or config classes can be added. 
+	*
+	* @param application 
+	* @return original application with Application class added in sources
+	*/
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(Application.class);
     }
