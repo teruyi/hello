@@ -11,6 +11,10 @@ import java.util.Date;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
+/*
+* Indicates that the class should use Spring's JUnit facilities. SpringJUnit4ClassRunner is a custom extension of JUnit's BlockJUnit4ClassRunner
+* which provides functionality of the Spring TestContext Framework
+*/
 
 // JUnit4 invoke SpringJUnit4ClassRunner class
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -19,6 +23,7 @@ import static org.junit.Assert.*;
  * for integration tests
  */
 @SpringApplicationConfiguration(classes = Application.class)
+
 /**
 * UnitTest
 *
