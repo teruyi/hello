@@ -54,7 +54,7 @@ public class IntegrationTests {
 		private MockMvc mockMvc;
 
 		/*
-		 * Sentence to be executed before the test, in order to prepare the base architecture of the tests
+		 * Sentence to be executed before the test, in order to prepare the base architecture for the proper functioning of the tests
 		 */
 	    @Before
 	    public void setup() {
