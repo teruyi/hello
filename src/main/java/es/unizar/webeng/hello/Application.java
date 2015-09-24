@@ -6,6 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 /**
 * The @SpringBootApplication annotation is used to add the following characteristics:
+*
 *	The @ComponentScan annotation tells Spring to look for other components, configurations,
 *	and services in the the hello package, allowing it to find the HelloController.
 *
