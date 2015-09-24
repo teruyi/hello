@@ -32,6 +32,14 @@ import static org.hamcrest.CoreMatchers.*;
 */
 @WebAppConfiguration
 
+/**
+* IntegrationTests
+*
+* Program that performs the integration tests of the application 'hello'
+* Integration tests ensure the proper behaviour of the application 
+* and are tipically performed after system and unitary testing.
+* 
+*/
 public class IntegrationTests {
 
 	@Autowired

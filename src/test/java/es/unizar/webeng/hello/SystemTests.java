@@ -36,6 +36,15 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 // Indicates that the ApplicationContext associated with a test is "dirty" and should therefore be closed and removed from the context cache
 @DirtiesContext
+/**
+* SystemTests
+*
+* Program that performs the system tests of the application 'hello'
+* System tests look for discrepancies between the program 
+* and the objective or requirement , focusing on the mistakes made during 
+* the transition process to design the functional specification.
+* 
+*/
 public class SystemTests {
 
 	// It will contain the random port
