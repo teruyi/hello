@@ -5,5 +5,4 @@ Please, go to the [Wiki](https://github.com/UNIZAR-30246-WebEngineering/hello/wi
 User name | NIA | Travis-CI|Score
 ----------|-----|----------|-----
 [UNIZAR-30246-WebEngineering](https://github.com/UNIZAR-30246-WebEngineering/hello) |30246 | [![Build Status](https://travis-ci.org/UNIZAR-30246-WebEngineering/hello.svg)](https://travis-ci.org/UNIZAR-30246-WebEngineering/hello)
-your name | your nia | your Travis-ci status
-[MarcosCM](https://github.com/MarcosCM) | 467716 | [![Build Status](https://travis-ci.org/MarcosCM/hello.svg)](https://travis-ci.org/MarcosCM/hello)
+[MarcosCM](https://github.com/MarcosCM/hello) | 467716 | [![Build Status](https://travis-ci.org/MarcosCM/hello.svg)](https://travis-ci.org/MarcosCM/hello)
