@@ -47,7 +47,7 @@ public class UnitTest {
 		*/
     @Test
     public void testMessage() throws Exception {
-    	HashMap<String,Object> map = new HashMap<>();
+    	HashMap<String,Object> map = new HashMap<>();		
     	String view = controller.welcome(map);
 			Date now = new Date();
 

@@ -9,3 +9,4 @@ User name | NIA | Travis-CI|Score
 [Cristian Román](https://github.com/khmDEV/hello) |646564 | [![Build Status](https://travis-ci.org/khmDEV/hello.svg)](https://travis-ci.org/khmDEV/hello)
 [Javier Beltran Jorba] (https://github.com/MrJavo94/hello) | 532581 | [![Build Status](https://travis-ci.org/MrJavo94/hello.svg)](https://travis-ci.org/MrJavo94/hello)
 [MarcosCM](https://github.com/MarcosCM/hello) | 467716 | [![Build Status](https://travis-ci.org/MarcosCM/hello.svg)](https://travis-ci.org/MarcosCM/hello)
+[Jorge Cáncer Gil] (https://github.com/jorcox/hello) | 646122 | [![Build Status](https://travis-ci.org/jorcox/hello.svg)](https://travis-ci.org/jorcox/hello)
