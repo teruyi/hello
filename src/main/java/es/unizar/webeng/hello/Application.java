@@ -16,6 +16,7 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
+    //Inicializa el servidor/aplicación usando las clases de Spring
         SpringApplication.run(Application.class, args);
     }
     
