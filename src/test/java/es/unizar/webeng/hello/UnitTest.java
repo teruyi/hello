@@ -15,6 +15,10 @@ import static org.junit.Assert.*;
 @SpringApplicationConfiguration(classes = Application.class)
 public class UnitTest {
 
+
+	/*
+    * This tag is used to set a default value from properties file
+	*/
 	@Value("${app.message:Hello World}")
 	private String message;	
 
