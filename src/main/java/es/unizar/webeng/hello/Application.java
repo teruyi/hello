@@ -5,6 +5,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 
+/*
+ * The @SpringBootApplication annotation configures the web application, adding
+ * automatically all the configurations of Spring and JEE, which normally had to
+ * be done manually. Optatives: the @SpringBootApplication annotation is equivalent
+ * to using @Configuration, @EnableAutoConfiguration and @ComponentScan with their
+ * default attributes.
+ */
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
 
