@@ -27,8 +27,10 @@ public class HelloController {
 	
    /**
 	* This method assigns the date and the message
-	* to the data structure called model and 
-	* returns the name of the corresponding view, in
+	* to the data structure called model in order 
+	* to pass data from the controller to the view. 
+	*
+	* @return the name of the corresponding view, in
 	* this case wellcome.jsp
 	*/
 	public String welcome(Map<String, Object> model) {
