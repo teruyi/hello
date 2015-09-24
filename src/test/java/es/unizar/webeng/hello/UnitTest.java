@@ -13,6 +13,14 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
+/**
+* UnitTest
+*
+* Program that performs the unit test of the application 'hello'
+* Unit tests check the proper behavior of a code module to ensure
+* that each module works properly separately.
+* 
+*/
 public class UnitTest {
 
 	@Value("${app.message:Hello World}")

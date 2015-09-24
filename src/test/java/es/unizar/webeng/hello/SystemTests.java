@@ -20,6 +20,15 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @WebAppConfiguration
 @IntegrationTest("server.port=0")
 @DirtiesContext
+/**
+* SystemTests
+*
+* Program that performs the system tests of the application 'hello'
+* System tests look for discrepancies between the program 
+* and the objective or requirement , focusing on the mistakes made during 
+* the transition process to design the functional specification.
+* 
+*/
 public class SystemTests {
 
 	@Value("${local.server.port}")
