@@ -42,35 +42,35 @@ import static org.hamcrest.CoreMatchers.*;
 */
 public class IntegrationTests {
 
-	  // Place an instance of WebApplicationContext into wac
+	  // Autowire relationships between collaborating beans, in this case, Place an instance of WebApplicationContext into wac
 		@Autowired
 	    private WebApplicationContext wac;
 
-		// Default value for message
+		// Default value for message to compare at tests
 		@Value("${app.message:Hello World}")
 		private String message;
 
-		//Create a new MockMvc for test
+		//Create a new MockMvc object for test which in turn is used perform requests and define expectations.
 		private MockMvc mockMvc;
 
 		/*
-		 * Sentence to be executed before the test
+		 * Sentence to be executed before the test, in order to prepare the base architecture of the tests
 		 */
 	    @Before
 	    public void setup() {
-	    	// Connect the mockMvc to a WebApplicationContext
+	    	// Build a MockMvc using the given WebApplicationContext
 	        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
 	    }
 
 		/*
-		 * Intengration Test to verify Messages
+		 * Integration Test to verify Messages
 		 */
 	    @Test
 	    public void testMessage() throws Exception {
 	      // Perform a request and return a type that allows chaining further actions,
 	    	// such as asserting expectations, on the result.
 	    	this.mockMvc.perform(get("/"))						//Perform a petition
-	        	.andDo(print())
+	        	.andDo(print())												//Execute action
 	            .andExpect(status().isOk())								//Verify status is Ok
 	            .andExpect(model().attribute("message", is(message)));	//Verify message equals message after print
 	    }
