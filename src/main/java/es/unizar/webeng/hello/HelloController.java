@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class HelloController {
-   /*
+	
+	/*
     * This annotation is used to set a default value from properties file
 	*/
 	@Value("${app.message:Hello World}")
