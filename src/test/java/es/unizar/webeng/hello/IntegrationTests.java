@@ -36,30 +36,42 @@ import static org.hamcrest.CoreMatchers.*;
 * IntegrationTests
 *
 * Program that performs the integration tests of the application 'hello'
-* Integration tests ensure the proper behaviour of the application 
+* Integration tests ensure the proper behaviour of the application
 * and are tipically performed after system and unitary testing.
-* 
+*
 */
 public class IntegrationTests {
 
-	@Autowired
-    private WebApplicationContext wac;
+	  // Place an instance of WebApplicationContext into wac
+		@Autowired
+	    private WebApplicationContext wac;
 
-	@Value("${app.message:Hello World}")
-	private String message;	
+		// Default value for message
+		@Value("${app.message:Hello World}")
+		private String message;
 
-	private MockMvc mockMvc;
+		//Create a new MockMvc for test
+		private MockMvc mockMvc;
 
-    @Before
-    public void setup() {
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
-    }
+		/*
+		 * Sentence to be executed before the test
+		 */
+	    @Before
+	    public void setup() {
+	    	// Connect the mockMvc to a WebApplicationContext
+	        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
+	    }
 
-    @Test
-    public void testMessage() throws Exception {
-        this.mockMvc.perform(get("/"))
-        	.andDo(print())
-            .andExpect(status().isOk())
-            .andExpect(model().attribute("message", is(message)));
-    }    
-}
+		/*
+		 * Intengration Test to verify Messages
+		 */
+	    @Test
+	    public void testMessage() throws Exception {
+	      // Perform a request and return a type that allows chaining further actions,
+	    	// such as asserting expectations, on the result.
+	    	this.mockMvc.perform(get("/"))						//Perform a petition
+	        	.andDo(print())
+	            .andExpect(status().isOk())								//Verify status is Ok
+	            .andExpect(model().attribute("message", is(message)));	//Verify message equals message after print
+	    }
+	}
