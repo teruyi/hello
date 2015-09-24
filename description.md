@@ -39,6 +39,11 @@ It is **strongly** recommended to follow this structure so as to maintain a clea
 ###Running the server
 The server can be easily executed by using `gradle run`, assuming Gradle has been properly set up. Then any client can connect and, if the application is working, the web will display the current date and time.
 
+###Building the project
+Assuming that you have set up gradle in your computer type in your console:
+	$ cd hello
+	$ gradle build
+
 ###Spring Framework Annotations
 You may find some [Spring Java annotations](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/package-tree.html) in specific pieces of code. The following annotations are used in this project:
 * **@SpringBootApplication**: defines the main Spring Application class in this project. It must be a class annotation.
