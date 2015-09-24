@@ -18,24 +18,6 @@ public class HelloController {
     * This annotation is used to set a default value from properties file
 	*/
 	@Value("${app.message:Hello World}")
-<<<<<<< HEAD
-	private String message;	
-	
-   /*
-	* This annotation is used by Spring to redirect each client call
-	* to this method
-	*/	
-	@RequestMapping("/")
-	
-   /**
-	* This method assigns the date and the message
-	* to the data structure called model in order 
-	* to pass data from the controller to the view. 
-	*
-	* @return the name of the corresponding view, in
-	* this case wellcome.jsp
-	*/
-=======
 	private String message;
 	/*
 	 * The annotation @RequestMapping is used by Spring to
@@ -58,7 +40,6 @@ public class HelloController {
          * @param model – Map which is going to be modified.
          * @return – This method always returns the String “welcome”.
 	 */
->>>>>>> upstream/master
 	public String welcome(Map<String, Object> model) {
 		/* It is made the first entry in the Map. */
 		model.put("time", new Date());
