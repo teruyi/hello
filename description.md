@@ -43,6 +43,15 @@ The server can be easily executed by using `gradle run`, assuming Gradle has bee
 Assuming that you have set up gradle in your computer type in your console:
 	$ cd hello
 	$ gradle build
+	
+###Testing your code
+Testing your code is very easy. 
+	$ cd hello
+	$ gradle test
+Last command will compile normal and tests classes in your project. Then test classes will be executed and tested.
+Error message will appear in the screen if something has gone wrong.
+	
+	
 
 ###Spring Framework Annotations
 You may find some [Spring Java annotations](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/package-tree.html) in specific pieces of code. The following annotations are used in this project:
@@ -56,3 +65,6 @@ You may find some [Spring Java annotations](http://docs.spring.io/spring/docs/cu
 * **@Value("${property:default_value}"): if the specified property exists, its value is assigned to a variable. Otherwise, the default value is assigned to that variable. It must be a variable annotation.
 * **@Before**: declares that a function should be executed before running the tests. It must be a function annotation.
 * **@Test**: declares that a function is a test. It must be a function annotation.
+
+###Travis.yml
+Travis CI uses .travis.yml file in the root of your repository to learn about your project and how you want your builds to be executed.

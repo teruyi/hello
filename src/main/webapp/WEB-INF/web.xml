@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is the application's Deployment Descriptor. This file includes all the configuration and
+resources of the application as well as the server's behaviour when a web request comes in. It maps
+the URL requested to the code that must serve the request-->
 <web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.4">
+	
 	<!-- display-name defines the name of the web application -->
 	<display-name>es.unizar.webeng.hello</display-name>
 	<welcome-file-list>
