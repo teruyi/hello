@@ -53,20 +53,19 @@ public class UnitTest {
 	private HelloController controller;
 
 	/**
-		* The function run the unity tests, if a test fail, the function
-		* will throw a Exception
-		*
-		* @param
-		* @return
-		* @throws Exception
-		*/
-	/**
-	 * Running this funtion will execute the unity tests on 'hello' application,
-	 * checking that all its parts are correct (messages, if the Date object 
-	 * does or does not exists and, in that case, if the Date on the time field
-	 * is correct or not). Failing in any of the test will result on an excepcion, 
-	 * thrown by the function.
-	 */
+	  * The function run the unity tests, if a test fail, the function
+	  * will throw a Exception
+	  *
+	  * Running this funtion will execute the unity tests on 'hello' application,
+	  * checking that all its parts are correct (messages, if the Date object 
+	  * does or does not exists and, in that case, if the Date on the time field
+	  * is correct or not). Failing in any of the test will result on an excepcion, 
+	  * thrown by the function.
+	  *
+	  * @param
+	  * @return
+	  * @throws Exception
+	  */
     @Test
     public void testMessage() throws Exception {
     	HashMap<String,Object> map = new HashMap<>();		

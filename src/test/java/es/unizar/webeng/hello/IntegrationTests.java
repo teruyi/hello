@@ -64,8 +64,7 @@ public class IntegrationTests {
 
 		/*
 		 * Integration Test to verify Messages
-		 */
-		/**
+		 *
 		 * Running this funtion will execute the integration test on 'hello' application,
 		 * in order to check out the message "message", after requesting a petition, 
 		 * executing an action and verifying the status of the type returned by the 
