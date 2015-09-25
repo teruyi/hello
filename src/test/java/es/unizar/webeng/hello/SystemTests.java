@@ -51,6 +51,7 @@ public class SystemTests {
 	@Value("${local.server.port}")
 	private int port = 0;
 	
+	
    /*
 	* System Test to verify if the URL works as is expected.
 	* If something goes wrong this method throws an Exception
