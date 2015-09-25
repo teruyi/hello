@@ -10,9 +10,11 @@
 
 	<script type="text/javascript" src="webjars/jquery/2.1.4/jquery.min.js" ></script>
 
-	<!-- Shows the time and a message (From HelloController)-->
+	<!-- Shows the time and a message (From HelloController)
+	Check Glyphicon section on description.md for more information-->
 
-	<kbd>${time}<span class="glyphicon glyphicon-console" ></span>${message}</kbd>
+	<span class="glyphicon glyphicon-time" ><kbd>${time}</kbd></span><br>
+	<span class="glyphicon glyphicon-user" ><kbd>${message}</kbd></span>
 </body>
 
 </html>
