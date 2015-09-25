@@ -92,7 +92,7 @@ This section present more information about the technologies which have been use
 ###Git Best Practises###
 In the next lines, there are some points which are important when we are using Git:
 
--Do read about git
+Do read about git
 -Do commit early and often
 -Don't panic
 -Do backups
