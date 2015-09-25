@@ -20,3 +20,4 @@ David Nicuesa Aranda | 653224 | [![Build Status](https://travis-ci.org/Nicu1309/
 Alberto Álvarez Aldea | 681687 | [![Build Status](https://travis-ci.org/albert17/hello.svg)](https://travis-ci.org/albert17/hello)
 [Oscar Clemente Pedrico] (https://github.com/OscarClemente/hello) | 530162 | [![Build Status](https://travis-ci.org/OscarClemente/hello.svg)](https://travis-ci.org/OscarClemente/hello)
 [Iñigo Gascón Royo] (https://github.com/Gascon95/hello) | 685215 | [![Build Status](https://travis-ci.org/Gascon95/hello.svg)](https://travis-ci.org/Gascon95/hello)
+Adrian Susinos Moreno | 650220 | [![Build Status](https://travis-ci.org/ader9/hello.svg)](https://travis-ci.org/ader9/hello)
