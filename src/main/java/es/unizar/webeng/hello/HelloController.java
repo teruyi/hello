@@ -58,6 +58,16 @@ public class HelloController {
 	* @return The name of the view responsible for rendering the HTML page. 
 	* As "wellcome" is returned, "wellcome.jsp" file will render the page.
 	*/
+	
+	/**
+	* This method assigns the date and the message
+	* to the data structure called model in order 
+	* to pass data from the controller to the view. 
+	*
+	* @return the name of the corresponding view, in
+	* this case wellcome.jsp
+	*/
+
 	public String welcome(Map<String, Object> model) {
 		/* It is made the first entry in the Map. */
 		model.put("time", new Date());
