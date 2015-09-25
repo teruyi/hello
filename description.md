@@ -48,7 +48,8 @@ Assuming that you have set up gradle in your computer type in your console:
 Testing your code is very easy. 
 *	$ cd hello
 *	$ gradle test
-Last command will compile normal and tests classes in your project. Then test classes will be executed and tested.
+
+** Last command will compile normal and tests classes in your project. Then test classes will be executed and tested.
 Error message will appear in the screen if something has gone wrong.
 	
 	
