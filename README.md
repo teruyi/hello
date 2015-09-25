@@ -16,4 +16,5 @@ User name | NIA | Travis-CI|Score
 Jorge Martinez Lascorz | 571735 | [![Build Status](https://travis-ci.org/JorgeCoke/hello.svg)](https://travis-ci.org/JorgeCoke/hello)
 David Nicuesa Aranda | 653224 | [![Build Status](https://travis-ci.org/Nicu1309/hello.svg)](https://travis-ci.org/Nicu1309/hello)
 [EduIbanez](https://github.com/EduIbanez/hello) | 528074 | [![Build Status](https://travis-ci.org/EduIbanez/hello.svg)](https://travis-ci.org/EduIbanez/hello)
+[Sergio Soro Miranda](https://github.com/teruyi/hello) | 671250 | [![Build Status](https://travis-ci.org/teruyi/hello.svg)](https://travis-ci.org/teruyi/hello)
 [Iñigo Gascón Royo] (https://github.com/Gascon95/hello) | 685215 | [![Build Status](https://travis-ci.org/Gascon95/hello.svg)](https://travis-ci.org/Gascon95/hello)

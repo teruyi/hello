@@ -11,6 +11,15 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
  * be done manually. Optatives: the @SpringBootApplication annotation is equivalent
  * to using @Configuration, @EnableAutoConfiguration and @ComponentScan with their
  * default attributes.
+ *
+ * The @ComponentScan annotation tells Spring to look for other components, configurations,
+ * and services in the the hello package, allowing it to find the HelloController.
+ *
+ * The @Configuration annotation tags the class as a source of bean definitions for the 
+ * application context.
+ *
+ * The @EnableAutoConfiguration annotation says to Spring Boot to start adding beans based
+ * on classpath settings, other beans, and various property settings.
  */
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
