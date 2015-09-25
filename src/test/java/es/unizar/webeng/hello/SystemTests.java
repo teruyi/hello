@@ -60,7 +60,7 @@ public class SystemTests {
 	public void testHome() throws Exception {
 		ResponseEntity<String> entity = new TestRestTemplate().getForEntity(
 				"http://localhost:" + this.port, String.class);
-		assertEquals(HttpStatus.OK, entity.getStatusCode());                  // Check if the HTTP status is Ok
+		assertEquals(HttpStatus.OK, entity.getStatusCode());                  // Check if the HTTP status is OK
 		assertTrue("Wrong body (title doesn't match):\n" + entity.getBody(), entity
 				.getBody().contains("<title>Hello"));
 	}
