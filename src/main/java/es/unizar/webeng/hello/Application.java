@@ -1,5 +1,20 @@
 package es.unizar.webeng.hello;
 
+/*
+* SpringApplication contains a group of classes that can be used to bootstrap and
+* launch a Spring application from the main method in Java.
+*
+* SpringBootApplication is used to indicate a configuration class that can declare
+* several @Bean methods and triggers. It is equivalent to declaring @Configuration
+* @EnableAutoConfiguration and @ComponentScan manually.
+*
+* SpringApplicationBuilder is a simpler builder for SpringApplication and ApplicationContext
+* with an API.
+*
+* SpringBootServletInitializer binds an application that starts a Spring Boot with the servlet
+* and filter mappings.
+*/
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -25,7 +40,12 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-    //Inicializa el servidor/aplicación usando las clases de Spring
+
+	/*Initializes the server/application using the imported Spring classes. It has two parameters:
+	 *The first parameter is the Object of the class itself
+	 *The second parameter contains any argument that the Spring application might need. 
+	 *Nonetheless a SpringApplication instance can also be created without passing the .class object
+	 */
         SpringApplication.run(Application.class, args);
     }
     
