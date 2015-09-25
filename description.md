@@ -71,8 +71,7 @@ As you can see, `your content`  refers to what you wrote, and `other content` re
 `other content` instead of `your content` or you can make a new change. You always need to keep on mind the option you take must satisfy both parts, you and them, and it must make sense.
 
 * Repeat process above with all the conflicts you have.
-* You are now ready to do `add` and `commit` and synchronize your repository again with the upstream, you
-can check the [wiki](https://github.com/UNIZAR-30246-WebEngineering/hello/wiki) to do this task.
+* You are now ready to do `add` and `commit` , synchronize your repository again with the upstream and `push` ,you can check the [wiki](https://github.com/UNIZAR-30246-WebEngineering/hello/wiki) to do this task.
 
 ###Spring Framework Annotations
 You may find some [Spring Java annotations](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/package-tree.html) in specific pieces of code. The following annotations are used in this project:
