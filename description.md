@@ -56,3 +56,6 @@ You may find some [Spring Java annotations](http://docs.spring.io/spring/docs/cu
 * **@Value("${property:default_value}"): if the specified property exists, its value is assigned to a variable. Otherwise, the default value is assigned to that variable. It must be a variable annotation.
 * **@Before**: declares that a function should be executed before running the tests. It must be a function annotation.
 * **@Test**: declares that a function is a test. It must be a function annotation.
+
+###Travis.yml
+Travis CI uses .travis.yml file in the root of your repository to learn about your project and how you want your builds to be executed.
