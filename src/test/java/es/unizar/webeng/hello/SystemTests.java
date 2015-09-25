@@ -54,8 +54,6 @@ public class SystemTests {
 	/**
 	* Method that can be executed in order to test the connection to the Home page
 	* If something goes wrong this method throws an Exception
-	* @param
-	* @return
 	* @throws Exception
 	*/
 	@Test
@@ -76,8 +74,7 @@ public class SystemTests {
 
 	/**
 	* Method that can be executed in order to test the connection to styles sheet
-	* @param
-	* @return
+	* If something goes wrong this method throws an Exception
 	* @throws Exception
 	*/
 	@Test
