@@ -19,3 +19,36 @@ David Nicuesa Aranda | 653224 | [![Build Status](https://travis-ci.org/Nicu1309/
 [Sergio Soro Miranda](https://github.com/teruyi/hello) | 671250 | [![Build Status](https://travis-ci.org/teruyi/hello.svg)](https://travis-ci.org/teruyi/hello)
 Alberto Álvarez Aldea | 681687 | [![Build Status](https://travis-ci.org/albert17/hello.svg)](https://travis-ci.org/albert17/hello)
 [Oscar Clemente Pedrico] (https://github.com/OscarClemente/hello) | 530162 | [![Build Status](https://travis-ci.org/OscarClemente/hello.svg)](https://travis-ci.org/OscarClemente/hello)
+Adrian Susinos Moreno | 650220 | [![Build Status](https://travis-ci.org/ader9/hello.svg)](https://travis-ci.org/ader9/hello)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Adrian Susinos | 650220 | [![Build Status](https://travis-ci.org/ader9/hello.svg)](https://travis-ci.org/ader9/hello)
+[UNIZAR-30246-WebEngineering](https://github.com/UNIZAR-30246-WebEngineering/hello) |30246 | [![Build Status](https://travis-ci.org/UNIZAR-30246-WebEngineering/hello.svg)](https://travis-ci.org/UNIZAR-30246-WebEngineering/hello)
+>>>>>>> 1f7296a2a9fd366973451ccd05c38e668ae27f05
