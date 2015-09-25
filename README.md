@@ -6,9 +6,6 @@ Please, go to the [Wiki](https://github.com/UNIZAR-30246-WebEngineering/hello/wi
 User name | NIA | Travis-CI|Score
 ----------|-----|----------|-----
 [UNIZAR-30246-WebEngineering](https://github.com/UNIZAR-30246-WebEngineering/hello) |30246 | [![Build Status](https://travis-ci.org/UNIZAR-30246-WebEngineering/hello.svg)](https://travis-ci.org/UNIZAR-30246-WebEngineering/hello)
-<<<<<<< HEAD
-Santiago Gil Begue | 683482 | [![Build Status](https://travis-ci.org/Santi-7/hello.svg)](https://travis-ci.org/Santi-7/hello)
-=======
 [AlejandroDiesteCortes](https://github.com/AlejandroDiesteCortes/hello) | 541892 | [![Build Status](https://travis-ci.org/AlejandroDiesteCortes/hello.svg)](https://travis-ci.org/AlejandroDiesteCortes/hello)
 [Cristian Román](https://github.com/khmDEV/hello) |646564 | [![Build Status](https://travis-ci.org/khmDEV/hello.svg)](https://travis-ci.org/khmDEV/hello)
 [Javier Beltran Jorba] (https://github.com/MrJavo94/hello) | 532581 | [![Build Status](https://travis-ci.org/MrJavo94/hello.svg)](https://travis-ci.org/MrJavo94/hello)
@@ -21,8 +18,5 @@ David Nicuesa Aranda | 653224 | [![Build Status](https://travis-ci.org/Nicu1309/
 [EduIbanez](https://github.com/EduIbanez/hello) | 528074 | [![Build Status](https://travis-ci.org/EduIbanez/hello.svg)](https://travis-ci.org/EduIbanez/hello)
 [Sergio Soro Miranda](https://github.com/teruyi/hello) | 671250 | [![Build Status](https://travis-ci.org/teruyi/hello.svg)](https://travis-ci.org/teruyi/hello)
 Alberto Álvarez Aldea | 681687 | [![Build Status](https://travis-ci.org/albert17/hello.svg)](https://travis-ci.org/albert17/hello)
-<<<<<<< HEAD
-Santiago Gil Begue | 683482 | [!Build Status](https://travis-ci.org/Santi-7/hello.svg)](https://travis-ci.org/Santi-7/hello)
-=======
 [Oscar Clemente Pedrico] (https://github.com/OscarClemente/hello) | 530162 | [![Build Status](https://travis-ci.org/OscarClemente/hello.svg)](https://travis-ci.org/OscarClemente/hello)
->>>>>>> upstream/master
+Santiago Gil Begue | 683482 | [!Build Status](https://travis-ci.org/Santi-7/hello.svg)](https://travis-ci.org/Santi-7/hello)
