@@ -88,20 +88,4 @@ Coming up next, the using of the reserved words for Javadoc are going to be expl
 ###More about the used technologies###
 This section present more information about the technologies which have been used in the application.
 
-
 ###Git Best Practises
-In the next lines, there are some points which are important when we are using Git:
-
--Do read about git
--Do commit early and often
--Don't panic
--Do backups
--Don't change published history
--Do choose a workflow
--Do divide work into repositories
--Do make useful commit messages
--Do keep up to date
--Do periodic maintenance
--Do enforce Standards
--Do use useful tools
--Do integrate with external tools
