@@ -66,8 +66,59 @@ You may find some [Spring Java annotations](http://docs.spring.io/spring/docs/cu
 * **@Before**: declares that a function should be executed before running the tests. It must be a function annotation.
 * **@Test**: declares that a function is a test. It must be a function annotation.
 
+###Java Anotations
+Java defines a set of annotations that are built into the language.
+
+* **@Override**: Checks that the method is an override. Causes a compile error if the method is not found in one of the parent classes or implemented interfaces.
+
+* **@Deprecated**: Marks the method as obsolete. Causes a compile warning if the method is used.
+
+* **@SuppressWarnings**: Instructs the compiler to suppress the compile time warnings specified in the annotation parameters.
+
+* **@SafeVarargs**: Suppress warnings for all callers of a method or constructor with a generics varargs parameter, since Java 7.
+
+* **@FunctionalInterface**: Specifies that the type declaration is intended to be a functional interface, since Java 8.
+
+###Javadoc
+Javadoc is an Oracle's tool which generates documentation of Java API in HTML format based on Java code.
+
+It's need using some reserved words preceded by "@" for Generating APIs. This words are wrote before a method or a class.
+
+Coming up next, the using of the reserved words for Javadoc are going to be explained:
+
+* **@author**: Indicates the Development's name.
+* **@deprecated**: Indicates that a method or class is obsoleted and it is not recommended use it, due to it will probably desapear in the next version.
+* **@param**: Defines a parameter of a method. It's required for each parameter in the method.
+* **@return**: Informs of the element which return a method. It is forbidden in constructs and "void" methods.
+* **@see**: Associates with another method or class.
+* **@throws**: Informs of the exception which is throwed by a method.
+* **@version**: Indicates de version of the method or class.
+
+###More about the used technologies
+This section present more information about the technologies which have been used in the application.
+
+
+###Git Best Practises
+In the next lines, there are some points which are important when we are using Git:
+
+* Do read about git
+* Do commit early and often
+* Don't panic
+* Do backups
+* Don't change published history
+* Do choose a workflow
+* Do divide work into repositories
+* Do make useful commit messages
+* Do keep up to date
+* Do periodic maintenance
+* Do enforce Standards
+* Do use useful tools
+* Do integrate with external tools
+
+
 ###Travis.yml
 Travis CI uses .travis.yml file in the root of your repository to learn about your project and how you want your builds to be executed.
+
 
 ###How does Travis know that you have pushed something to your repo?
 
@@ -77,4 +128,3 @@ It allows to those third-party services to easily know when a change has been ma
 In the case of Github, it allows you to set custom webhooks so, when something happens in your repository (like a pull, push) , an HTTP POST is made to the provided URL. It is very useful for [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) tools, like Travis. To view what webhooks are set-up on your repository, go to Settings -> Webhook & Services.
 
 This is how Travis works. Travis set up a webhook on your repository, so when your code changes, Travis servers receive a request and then, build your updated code. Although Travis works with Github, if they add support for custom webhooks, it would be easy to create your owns (You would have only to make HTTP requests to Travis). 
-
