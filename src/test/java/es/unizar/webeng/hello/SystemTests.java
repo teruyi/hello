@@ -51,20 +51,45 @@ public class SystemTests {
 	@Value("${local.server.port}")
 	private int port = 0;
 	
+	/**
+	* Method that can be executed in order to test the connection to the Home page
+	* @param
+	* @return
+	* @throws Exception
+	*/
 	@Test
 	public void testHome() throws Exception {
+
+		// Information given by a GET petition to the URL specified
+		// is stored on an Entity
 		ResponseEntity<String> entity = new TestRestTemplate().getForEntity(
 				"http://localhost:" + this.port, String.class);
+
+		//Check if the status is OK, this means code is 200 so is reachable
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
+		
+		//Check if the page's title starts with Hello, if it doesn't it throws an error
 		assertTrue("Wrong body (title doesn't match):\n" + entity.getBody(), entity
 				.getBody().contains("<title>Hello"));
 	}
 	
+	/**
+	* Method that can be executed in order to test the connection to styles sheet
+	* @param
+	* @return
+	* @throws Exception
+	*/
 	@Test
 	public void testCss() throws Exception {
+
+		// Information given by a GET petition to the URL specified by the first parameter
+		// is stored on an Entity
 		ResponseEntity<String> entity = new TestRestTemplate().getForEntity(
 				"http://localhost:" + this.port
 						+ "/webjars/bootstrap/3.3.5/css/bootstrap.min.css", String.class);
+
+		// Checkings to verify that it is available to connect, 
+		// connection has been successful and it contains a correct css format
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 		assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody().contains("body"));
 		assertEquals("Wrong content type:\n" + entity.getHeaders().getContentType(),
