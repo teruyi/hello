@@ -50,11 +50,10 @@ public class SystemTests {
 	// It will contain the random port
 	@Value("${local.server.port}")
 	private int port = 0;
-	
+
 	/**
 	* Method that can be executed in order to test the connection to the Home page
-	* @param
-	* @return
+	* If something goes wrong this method throws an Exception
 	* @throws Exception
 	*/
 	@Test
@@ -72,11 +71,10 @@ public class SystemTests {
 		assertTrue("Wrong body (title doesn't match):\n" + entity.getBody(), entity
 				.getBody().contains("<title>Hello"));
 	}
-	
+
 	/**
 	* Method that can be executed in order to test the connection to styles sheet
-	* @param
-	* @return
+	* If something goes wrong this method throws an Exception
 	* @throws Exception
 	*/
 	@Test
