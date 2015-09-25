@@ -119,3 +119,13 @@ In the next lines, there are some points which are important when we are using G
 
 ###Travis.yml
 Travis CI uses .travis.yml file in the root of your repository to learn about your project and how you want your builds to be executed.
+
+
+###How does Travis know that you have pushed something to your repo?
+
+Travis knows it using a feature called [webhooks](https://en.wikipedia.org/wiki/Webhook). Webhooks are HTTP requests made by a web page or application to a custom URL, triggered by some event. Usually, the custom URL belongs to a third-party service.
+It allows to those third-party services to easily know when a change has been made, without being constantly checking for changes on the website.
+
+In the case of Github, it allows you to set custom webhooks so, when something happens in your repository (like a pull, push) , an HTTP POST is made to the provided URL. It is very useful for [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) tools, like Travis. To view what webhooks are set-up on your repository, go to Settings -> Webhook & Services.
+
+This is how Travis works. Travis set up a webhook on your repository, so when your code changes, Travis servers receive a request and then, build your updated code. Although Travis works with Github, if they add support for custom webhooks, it would be easy to create your owns (You would have only to make HTTP requests to Travis). 
