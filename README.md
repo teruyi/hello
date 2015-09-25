@@ -5,7 +5,6 @@ Please, go to the [Wiki](https://github.com/UNIZAR-30246-WebEngineering/hello/wi
 
 User name | NIA | Travis-CI|Score
 ----------|-----|----------|-----
-<<<<<<< HEAD
 [UNIZAR-30246-WebEngineering](https://github.com/UNIZAR-30246-WebEngineering/hello) |30246 | [![Build Status](https://travis-ci.org/UNIZAR-30246-WebEngineering/hello.svg)](https://travis-ci.org/UNIZAR-30246-WebEngineering/hello)
 [AlejandroDiesteCortes](https://github.com/AlejandroDiesteCortes/hello) | 541892 | [![Build Status](https://travis-ci.org/AlejandroDiesteCortes/hello.svg)](https://travis-ci.org/AlejandroDiesteCortes/hello)
 [Cristian Román](https://github.com/khmDEV/hello) |646564 | [![Build Status](https://travis-ci.org/khmDEV/hello.svg)](https://travis-ci.org/khmDEV/hello)
@@ -17,5 +16,4 @@ User name | NIA | Travis-CI|Score
 Jorge Martinez Lascorz | 571735 | [![Build Status](https://travis-ci.org/JorgeCoke/hello.svg)](https://travis-ci.org/JorgeCoke/hello)
 David Nicuesa Aranda | 653224 | [![Build Status](https://travis-ci.org/Nicu1309/hello.svg)](https://travis-ci.org/Nicu1309/hello)
 [EduIbanez](https://github.com/EduIbanez/hello) | 528074 | [![Build Status](https://travis-ci.org/EduIbanez/hello.svg)](https://travis-ci.org/EduIbanez/hello)
-=======
->>>>>>> upstream/master
+
