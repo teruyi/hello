@@ -66,7 +66,6 @@ You may find some [Spring Java annotations](http://docs.spring.io/spring/docs/cu
 * **@Before**: declares that a function should be executed before running the tests. It must be a function annotation.
 * **@Test**: declares that a function is a test. It must be a function annotation.
 
-<<<<<<< HEAD
 ###Java Anotations
 Java defines a set of annotations that are built into the language.
 
@@ -95,11 +94,11 @@ Coming up next, the using of the reserved words for Javadoc are going to be expl
 * **@throws**: Informs of the exception which is throwed by a method.
 * **@version**: Indicates de version of the method or class.
 
-###More about the used technologies###
+###More about the used technologies
 This section present more information about the technologies which have been used in the application.
 
 
-###Git Best Practises###
+###Git Best Practises
 In the next lines, there are some points which are important when we are using Git:
 
 * Do read about git
@@ -115,7 +114,7 @@ In the next lines, there are some points which are important when we are using G
 * Do enforce Standards
 * Do use useful tools
 * Do integrate with external tools
-=======
+
+
 ###Travis.yml
 Travis CI uses .travis.yml file in the root of your repository to learn about your project and how you want your builds to be executed.
->>>>>>> upstream/master
