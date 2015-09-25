@@ -14,4 +14,4 @@ User name | NIA | Travis-CI|Score
 [Iñigo Alonso Ruiz](https://github.com/shathe/hello)| 665959 | [![Build Status](https://travis-ci.org/Shathe/hello.svg)](https://travis-ci.org/Shathe/hello)
 [Ismael Rodríguez Hernández](https://github.com/ismaro3/hello)| 587429 | [![Build Status](https://travis-ci.org/ismaro3/hello.svg)](https://travis-ci.org/ismaro3/hello)
 Jorge Martinez Lascorz | 571735 | [![Build Status](https://travis-ci.org/JorgeCoke/hello.svg)](https://travis-ci.org/JorgeCoke/hello)
-EduIbanez(https://github.com/EduIbanez/hello) | 528074 | [![Build Status](https://travis-ci.org/EduIbanez/hello.svg)](https://travis-ci.org/EduIbanez/hello)
+[EduIbanez](https://github.com/EduIbanez/hello) | 528074 | [![Build Status](https://travis-ci.org/EduIbanez/hello.svg)](https://travis-ci.org/EduIbanez/hello)
