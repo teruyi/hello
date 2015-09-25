@@ -14,12 +14,6 @@ import java.util.Date;
  * given matchers.
  */
 import static org.hamcrest.CoreMatchers.*;
-/*
- * Imports the Assert object that will contain a set
- * of assertion methods (CoreMatchers, for example) and
- * could be useful for writing methods. Failed assertions
- * will be the only ones recorded.
- */
 import static org.junit.Assert.*;
 /*
 * Indicates that the class should use Spring's JUnit facilities. SpringJUnit4ClassRunner is a custom extension of JUnit's BlockJUnit4ClassRunner
