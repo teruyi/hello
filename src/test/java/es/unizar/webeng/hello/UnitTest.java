@@ -9,7 +9,17 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.HashMap;
 import java.util.Date;
 
+/* Imports the CoreMatchers object that will be used
+ * to examine if the specified objects match with the
+ * given matchers.
+ */
 import static org.hamcrest.CoreMatchers.*;
+/*
+ * Imports the Assert object that will contain a set
+ * of assertion methods (CoreMatchers, for example) and
+ * could be useful for writing methods. Failed assertions
+ * will be the only ones recorded.
+ */
 import static org.junit.Assert.*;
 /*
 * Indicates that the class should use Spring's JUnit facilities. SpringJUnit4ClassRunner is a custom extension of JUnit's BlockJUnit4ClassRunner
@@ -43,13 +53,19 @@ public class UnitTest {
 	private HelloController controller;
 
 	/**
-		* The function run the unity tests, if a test fail, the function
-		* will throw a Exception
-		*
-		* @param
-		* @return
-		* @throws Exception
-		*/
+	  * The function run the unity tests, if a test fail, the function
+	  * will throw a Exception
+	  *
+	  * Running this funtion will execute the unity tests on 'hello' application,
+	  * checking that all its parts are correct (messages, if the Date object 
+	  * does or does not exists and, in that case, if the Date on the time field
+	  * is correct or not). Failing in any of the test will result on an excepcion, 
+	  * thrown by the function.
+	  *
+	  * @param
+	  * @return
+	  * @throws Exception
+	  */
     @Test
     public void testMessage() throws Exception {
     	HashMap<String,Object> map = new HashMap<>();		
