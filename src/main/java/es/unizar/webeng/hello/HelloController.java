@@ -29,26 +29,17 @@ public class HelloController {
 	 */
 	@RequestMapping("/")
 	
+	
 	/**
-	 * As it´s said before, every customer call to the homepage
-	 * is addressed to this method. This method always returns
-	 * the String “welcome”. In addition, it makes two new entries
-	 * in the Map of Strings (as key) and Objects (as value)
-	 * passed by parameter. The first one has the key “time”, and
-	 * its value is a Date object which manages the current date.
-	 * The second one has the key “message”, and its value is the
-	 * reference to the String identified by “message” explained before.
-         * @param model – Map which is going to be modified.
-         * @return – This method always returns the String “welcome”.
-	 */
-
-	/**
-	* Controller for root ("/") path.
 	* It is called when a HTTP request is made to the root path, as indicated by
 	* @RequestMapping("/") annotation. In this case, HTTP method is not specified, 
 	* so it will be called regardless the used method.
-	* It sets "time" parameter to current time, and "message" to "app.message" 
-	* property, and then lets "wellcome.jsp" render the HTML view with that data.
+	* 
+	* In addition, it makes two new entries in the Map of Strings (as key)
+	* and Objects (as value) passed by parameter. The first one has the key “time”, and
+	* its value is a Date object which manages the current date.
+	* The second one has the key “message”, and its value is the
+	* reference to the String identified by “message” explained before.
 	*
 	* @param model This parameter is used for passing data from the controller 
 	* to the view.
