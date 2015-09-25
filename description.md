@@ -41,13 +41,14 @@ The server can be easily executed by using `gradle run`, assuming Gradle has bee
 
 ###Building the project
 Assuming that you have set up gradle in your computer type in your console:
-	$ cd hello
-	$ gradle build
+*	$ cd hello
+*	$ gradle build
 	
 ###Testing your code
 Testing your code is very easy. 
-	$ cd hello
-	$ gradle test
+*	$ cd hello
+*	$ gradle test
+
 Last command will compile normal and tests classes in your project. Then test classes will be executed and tested.
 Error message will appear in the screen if something has gone wrong.
 	
