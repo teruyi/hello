@@ -52,7 +52,26 @@ Testing your code is very easy.
 The later command will compile normal and tests classes in your project. Then test classes will be executed and tested.
 Error message will appear in the screen if something has gone wrong.
 	
-	
+###Conflicts on merge process?
+If you are not able to merge your improvements on the code with your updated respository, don't panic  and stop typing random commands, this may help you.  Once you have added and committed your local files you will have to synchronize your forked repository  with your upstream repository and here is where you might find conflicts in some of the files. Solving  this issues is easy:
+
+* Identifying the conflict:
+  * When there is a conflict, you will see on the console where it is (There may be more than one).
+* Now you need to open the file in conflict with any text editor and you will see that some words have appeared in this file and it will have the next format:
+
+     any content  
+     <<<<< HEAD  
+     your content  
+     =====  
+     other content
+     
+     \>>>>>upstream/master
+ 
+As you can see, `your content`  refers to what you wrote, and `other content` refers to what other people wrote, the rest added are conflict markers. Here you have a few options; you can keep your changes by
+deleting `other content` , you can use `other content` instead of `your content` or you can make a new change. You always need to keep on mind the option you take must satisfy both parts, you and them, and it must make sense. Then you can delete the conflict markers.
+
+* Repeat process above with all the conflicts you have.
+* You are now ready to do `add` and `commit` , synchronize your repository again with the upstream, and `push` , you can check the [wiki](https://github.com/UNIZAR-30246-WebEngineering/hello/wiki) to do this task.
 
 ###Spring Framework Annotations
 You may find some [Spring Java annotations](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/package-tree.html) in specific pieces of code. The following annotations are used in this project:
@@ -167,3 +186,13 @@ A leading slash matches the beginning of the pathname. For example, "/*.c" match
 * **Notes**
 
 The purpose of gitignore files is to ensure that certain files not tracked by Git remain untracked. To stop tracking a file that is currently tracked, use git rm --cached.
+
+
+###Bootstrap
+Bootstrap is a common Framework for HTML, CSS and Javascript used for developing Web Applications. It
+contains templates with formularies, buttons and other kind of design components as well as functionalities to make a responsive application.
+#####Glyphicon Components
+  Bootstrap includes a set of glyphs components that can be used to improve the web's design. They are
+  monochromatic icons and symbols in order to enrich the usability of the web by making the navigation
+  clearer and easier. Theses glyphs are usually not available for free but their creator made them free
+  for Bootstrap. You can find more information going to [Glyphicons](http://glyphicons.com).
