@@ -1,12 +1,17 @@
 buildscript {
-    ext {
-        springBootVersion = '1.2.5.RELEASE'
-    }
+
+    // The repositories block indicates that the build should resolve its dependencies from the Maven
+    // Central repository. Gradle leans heavily on many conventions and facilities established by the
+    // Maven build tool, including the option of using Maven Central as a source of library dependencies.
+
     repositories {
         mavenCentral()
     }
+
+    // The dependencies block contains all the external dependencies that are need.
+
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.6.RELEASE") 
         classpath("io.spring.gradle:dependency-management-plugin:0.5.2.RELEASE")
     }
 }
@@ -17,6 +22,8 @@ apply plugin: 'eclipse-wtp'
 apply plugin: 'idea'
 apply plugin: 'spring-boot' 
 apply plugin: 'io.spring.dependency-management' 
+
+// The jar block specifies how the JAR file will be named. In this case, it will render hello-1.0.jar.
 
 jar {
     baseName = 'hello'
@@ -34,15 +41,14 @@ configurations {
 }
 
 dependencies {
-    compile			'org.springframework.boot:spring-boot-starter-web' 
-	compile			'org.webjars:bootstrap:3.3.5'
-	compile			'org.webjars:jquery:2.1.4'    
-    
+    compile 'org.springframework.boot:spring-boot-starter-web' 
+    compile 'org.webjars:bootstrap:3.3.5'
+    compile 'org.webjars:jquery:2.1.4'    
 
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
 
-    testCompile		'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
 
 
@@ -50,13 +56,18 @@ eclipse {
     classpath {
          containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
          containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
-		 file {
+         file {
              whenMerged { c ->
                  c.entries.findAll {entry -> entry.kind=='lib' && entry.moduleVersion.name?.startsWith('tomcat-')  }*.exported = false
-	         }
-	     }
+             }
+         }
     }
 }
+
+// The following task provides the Gradle Wrapper to the project. The Gradle Wrapper consists of
+// a batch script for Windows and a shell script for OS X and Linux. These scripts allow to run a
+// Gradle build without requiring that Gradle be installed on your system. gradleVersion is the
+// version the project should use
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.2.1'

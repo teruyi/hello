@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is the application's Deployment Descriptor. This file includes all the configuration and
+resources of the application as well as the server's behaviour when a web request comes in. It maps
+the URL requested to the code that must serve the request-->
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.4">
+	
+	<!-- display-name defines the name of the web application -->
+	<display-name>es.unizar.webeng.hello</display-name>
+	<welcome-file-list>
+		<!-- If a client does not specify a file when calling the web app, the
+		server looks for every file in the list below, and returns the first file
+		that exists. -->
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
