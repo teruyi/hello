@@ -10,6 +10,8 @@
 
 	<script type="text/javascript" src="webjars/jquery/2.1.4/jquery.min.js" ></script>
 
+        <!-- Shows an image as head of our page-->
+
 	<img src="http://southeastasianinstitute.edu.ph/wp-content/uploads/2014/11/Screen-Shot-2014-12-08-at-1.43.00-PM.png"> </img>
 
 	<!-- Shows the time and a message (From HelloController)
