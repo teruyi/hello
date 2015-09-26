@@ -149,6 +149,45 @@ In the case of Github, it allows you to set custom webhooks so, when something h
 
 This is how Travis works. Travis set up a webhook on your repository, so when your code changes, Travis servers receive a request and then, build your updated code. Although Travis works with Github, if they add support for custom webhooks, it would be easy to create your owns (You would have only to make HTTP requests to Travis). 
 
+
+###gitignore
+
+* **Description**
+
+Git uses this file to determinate which files and directories to ignore, before making a commit. From time to time, there are files you don`t want Git to check in to GitHub, and here is the utility of this file.
+
+Each line in a gitignore file specifies a pattern. When deciding whether to ignore a path, Git normally checks gitignore patterns from multiple sources, with the following order of precedence, from highest to lowest (within one level of precedence, the last matching pattern decides the outcome). This means the following, if we have this patterns in our gitignore file:
+
+* **Example**
+
+!/foo/bar
+/foo/*
+
+It says, dont ignore /foo/bar and ignore everything that begins with /foo. /foo/bar won`t be ignored because its pattern is higher in the order of precedende.
+
+* **Pattern Format**
+
+A blank line matches no files, so it can serve as a separator for readability.
+
+A line starting with # serves as a comment. Put a backslash ("\") in front of the first hash for patterns that begin with a hash.
+
+Trailing spaces are ignored unless they are quoted with backslash ("\").
+
+An optional prefix "!" which negates the pattern; any matching file excluded by a previous pattern will become included again. It is not possible to re-include a file if a parent directory of that file is excluded. Git doesn’t list excluded directories for performance reasons, so any patterns on contained files have no effect, no matter where they are defined. Put a backslash ("\") in front of the first "!" for patterns that begin with a literal "!", for example, "\!important!.txt".
+
+If the pattern ends with a slash, it is removed for the purpose of the following description, but it would only find a match with a directory. In other words, foo/ will match a directory foo and paths underneath it, but will not match a regular file or a symbolic link foo (this is consistent with the way how pathspec works in general in Git).
+
+If the pattern does not contain a slash /, Git treats it as a shell glob pattern and checks for a match against the pathname relative to the location of the .gitignore file (relative to the toplevel of the work tree if not from a .gitignore file).
+
+Otherwise, Git treats the pattern as a shell glob suitable for consumption by fnmatch(3) with the FNM_PATHNAME flag: wildcards in the pattern will not match a / in the pathname. For example, "Documentation/*.html" matches "Documentation/git.html" but not "Documentation/ppc/ppc.html" or "tools/perf/Documentation/perf.html".
+
+A leading slash matches the beginning of the pathname. For example, "/*.c" matches "cat-file.c" but not "mozilla-sha1/sha1.c".
+
+* **Notes**
+
+The purpose of gitignore files is to ensure that certain files not tracked by Git remain untracked. To stop tracking a file that is currently tracked, use git rm --cached.
+
+
 ###Bootstrap
 Bootstrap is a common Framework for HTML, CSS and Javascript used for developing Web Applications. It
 contains templates with formularies, buttons and other kind of design components as well as functionalities to make a responsive application.
