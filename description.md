@@ -1,7 +1,7 @@
 #Hello Application
 
 ###About
-Hello is a web application that greets their clients and shows the current date and time. It is developed in Java and uses [Spring Framework] (http://projects.spring.io/spring-framework/).
+Hello is a web application that greets their clients and shows the current date and time. It is developed in Java and uses [Spring Framework] (httpg//projects.spring.io/spring-framework/).
 
 ###File organization
 The project follows the recommended conventions about packaging and directories structure. The organization of the source code is explained in the next diagram:
@@ -196,3 +196,23 @@ contains templates with formularies, buttons and other kind of design components
   monochromatic icons and symbols in order to enrich the usability of the web by making the navigation
   clearer and easier. Theses glyphs are usually not available for free but their creator made them free
   for Bootstrap. You can find more information going to [Glyphicons](http://glyphicons.com).
+  
+  
+###Using Branches
+A branch represent an independent line of devlopment which allows to isolate changes from the main line of 
+development. Usually is used when a developer wants to add a new feature or fix a bug. He spawns a new branch to 
+encapsulate the code's changes, which would make sure that unstable code is never commit to the main code.
+
+#####Usage
+* List all of the branches in the repository: <code>git branch</code>
+* Create a branch: <code>git branch <branch's name> </code>, this command only create a new branch, if you want 
+  start adding commits to it, you need to select it.
+* Navigate between the differents branch in a proyect: <code>git checkout <branch's name></code>
+* Merge one branch with the current branch: <code>git merge <branch's name></code>
+* Delete a branch: <code> git branch -d <branch's name></code>
+
+Here is another interesting command that you can use:
+* Create a branch and move to it: <code>git checkout -b <branch's name></code>
+* See the differences between two branchs: <code>git diff --stat <branch 1> <branch 2></code>
+* Undo a merge: <code>git reset --hard HEAD</code>
+
