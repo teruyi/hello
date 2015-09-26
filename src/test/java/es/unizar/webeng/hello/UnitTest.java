@@ -62,8 +62,6 @@ public class UnitTest {
 	  * is correct or not). Failing in any of the test will result on an excepcion, 
 	  * thrown by the function.
 	  *
-	  * @param
-	  * @return
 	  * @throws Exception
 	  */
     @Test

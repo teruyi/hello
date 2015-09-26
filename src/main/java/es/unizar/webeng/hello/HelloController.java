@@ -22,7 +22,7 @@ public class HelloController {
 	/*
 	 * The annotation @RequestMapping is used by Spring to
 	 * know which Controller or which Controller’s method must
-	 * each hhtp customer call be addressed to. In this case,
+	 * each http customer call be addressed to. In this case,
 	 * we are informing that every http customer call to the
 	 * homepage is going to be managed by the public method
 	 * named “welcome” of our Controller.
