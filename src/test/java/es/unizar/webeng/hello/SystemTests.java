@@ -95,11 +95,15 @@ public class SystemTests {
 		// connection has been succesful.
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 		
-		// These assertion check if the information given by the GET petition (see above), which has 
-		// been saved in an entity, contains a correct css format. For more information about CSS 
-		// (Cascading Style Sheets), you can read about it in the W3 webpage (http://www.w3.org/TR/CSS/)
-		// or in the W3 schools webpage (http://www.w3schools.com/css/)
+		// These assertion check if the information given by the GET petition (if the body of the GET petition is  
+		// correct(contains the word 'body')), which has been saved in an entity, contains a correct css format. 
+		// For more information about CSS (Cascading Style Sheets), you can read about it in the 
+		// W3 webpage (http://www.w3.org/TR/CSS/) or in the W3 schools webpage (http://www.w3schools.com/css/)
+		// If the verification is not positive it throws an error with the given message.
 		assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody().contains("body"));
+		
+		// Checks if the 'Content-type' field of the GET petition is correct.
+		// If the verification is not positive it throws an error with the given message.
 		assertEquals("Wrong content type:\n" + entity.getHeaders().getContentType(),
 				MediaType.valueOf("text/css;charset=UTF-8"), entity.getHeaders()
 						.getContentType());
