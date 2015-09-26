@@ -12,7 +12,7 @@
 
         <!-- Shows an image as head of our page-->
 
-	<img src="/images/Head.png" />
+	<img src="http://localhost:8080/images/Head.png" />
 
 	<!-- Shows the time and a message (From HelloController)
 	divided on two lines and one message per line, with glyphicons added
