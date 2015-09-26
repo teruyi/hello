@@ -89,7 +89,11 @@ public class SystemTests {
 		// Checkings to verify that it is available to connect, 
 		// connection has been successful and it contains a correct css format
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
+		// Checks if the body of the GET petition is correct (contains the word 'body').
+		// If the verification is not positive it throws an error with the given message.
 		assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody().contains("body"));
+		// Checks if the 'Content-type' field of the GET petition is correct.
+		// If the verification is not positive it throws an error with the given message.
 		assertEquals("Wrong content type:\n" + entity.getHeaders().getContentType(),
 				MediaType.valueOf("text/css;charset=UTF-8"), entity.getHeaders()
 						.getContentType());

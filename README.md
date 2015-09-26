@@ -22,3 +22,4 @@ Alberto Álvarez Aldea | 681687 | [![Build Status](https://travis-ci.org/albert1
 [Iñigo Gascón Royo] (https://github.com/Gascon95/hello) | 685215 | [![Build Status](https://travis-ci.org/Gascon95/hello.svg)](https://travis-ci.org/Gascon95/hello)
 Adrian Susinos Moreno | 650220 | [![Build Status](https://travis-ci.org/ader9/hello.svg)](https://travis-ci.org/ader9/hello)
 [Santiago Gil Begué] (https://github.com/Santi-7/hello) | 683482 | [![Build Status](https://travis-ci.org/Santi-7/hello.svg)](https://travis-ci.org/Santi-7/hello)
+[Carlos Escuín Blasco](https://github.com/xarlieskin/hello) | 545003 | [![Build Status](https://travis-ci.org/xarlieskin/hello.svg)](https://travis-ci.org/xarlieskin/hello)
