@@ -10,7 +10,7 @@
 
 	<script type="text/javascript" src="webjars/jquery/2.1.4/jquery.min.js" ></script>
 
-        <!-- Shows an image as head of our page-->
+    <!-- Shows an image as head of our page-->
 
 	<img src="/images/Head.png" />
 
