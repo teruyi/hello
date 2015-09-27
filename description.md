@@ -276,3 +276,5 @@ In this file, we tell Heroku how to run our app. In this case, it executes the b
 This file has been added in order to specify the project name. Without it, "installApp" task doesn't work well.
 
 
+##Static content
+For convention in using Spring Boot, static content (images for example) is served in /src/main/resources/static classpath. In this web app, we use an imaged served in /src/main/resources/static/images/Head.png. We can call this image just with the /images/Head.png path, thanks to the facilities that Spring Boot provides us.
