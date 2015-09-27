@@ -110,7 +110,7 @@ public class SystemTests {
 	}	
 	
 	/**
-         * Method that can be executed in otder to test if Head.png is being served.
+         * Method that can be executed in order to test if Head.png is being served.
          * @throws Exception if the image is not being served
 	 */
 	@Test
@@ -121,10 +121,19 @@ public class SystemTests {
 		ResponseEntity<String> entity = new TestRestTemplate().getForEntity("http://localhost:" +
 		+ this.port + "/images/Head.png", String.class);
 		
-		// Check if the StatusCOde is equal to 200 (HttpStatus.OK) which is the standard response
+		// Check if the StatusCode is equal to 200 (HttpStatus.OK) which is the standard response
 		// for succesful HTTP requests. If correct, it means that is available to connect and the
 		// connection has been succesful.
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
+
+		// Checks if the body of the GET petition is correct (contains the word 'Head.png')
+		assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody().contains("<title>Head.png"));
+
+		// Checks if the 'Content-type' field of the GET petition is correct. This means,
+		// the returned entity is a PNG file. If the verification is not positive it throws
+		// an error with the given message.
+		assertEquals("Wrong content type:\n" + entity.getHeaders().getContentType(),
+			MediaType.valueOf("IMAGE_PNG"), entity.getHeaders().getContentType());
 	}
 	
 }
