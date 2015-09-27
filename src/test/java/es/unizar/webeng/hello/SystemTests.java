@@ -145,14 +145,11 @@ public class SystemTests {
 
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 
-		// Checks if the body of the GET petition is correct (contains the word 'Head.png')
-		//assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody().contains("a")); byte[] havn't .contains
-
 		// Checks if the 'Content-type' field of the GET petition is correct. This means,
 		// the returned entity is a PNG file. If the verification is not positive it throws
 		// an error with the given message.
 		assertEquals("Wrong content type:\n" + entity.getHeaders().getContentType(),
-			entity.getHeaders().getContentType(), entity.getHeaders().getContentType()); // evidente
+			MediaType.valueOf("image/png;charset=UTF-8"), entity.getHeaders().getContentType());
 	}
 
 }
