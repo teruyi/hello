@@ -250,4 +250,36 @@ Here is another interesting command that you can use:
 * See the differences between two branchs: <code>git diff --stat <branch 1> <branch 2></code>
 * Undo a merge: <code>git reset --hard HEAD</code>
 
+###RequestMethod
+It's possible diference between a POST and a GET request. We only have to indicates it in the @RequestMapping.
+Example: @RequestMapping(value="/", method=RequestMethod.POST)
+This is used in HelloController.java
+
+###Obtain client's IP address
+We can obtain de client's IP address or the latest proxy which he used, using "request.getRemoteAddr()".
+This is used in "welcome.jsp"
+
+###Obtain client's System Information 
+We can obtain de client's IP system information, using "request.getHeader("User-Agent")".
+This is used in "welcome.jsp"
+
+
+###Using Branches
+A branch represent an independent line of devlopment which allows to isolate changes from the main line of 
+development. Usually is used when a developer wants to add a new feature or fix a bug. He spawns a new branch to 
+encapsulate the code's changes, which would make sure that unstable code is never commit to the main code.
+
+#####Usage
+* List all of the branches in the repository: <code>git branch</code>
+* Create a branch: <code>git branch <branch's name> </code>, this command only create a new branch, if you want 
+  start adding commits to it, you need to select it.
+* Navigate between the differents branch in a proyect: <code>git checkout <branch's name></code>
+* Merge one branch with the current branch: <code>git merge <branch's name></code>
+* Delete a branch: <code> git branch -d <branch's name></code>
+
+Here is another interesting command that you can use:
+* Create a branch and move to it: <code>git checkout -b <branch's name></code>
+* See the differences between two branchs: <code>git diff --stat <branch 1> <branch 2></code>
+* Undo a merge: <code>git reset --hard HEAD</code>
+
 
