@@ -68,7 +68,6 @@ public class UnitTest {
 	public void testMessage() throws Exception {
 		HashMap<String, Object> map = new HashMap<>();
 		String view = controller.welcome(map);
-		String view2 = controller.userdata();
 		Date now = new Date();
 
 		// It checks that the message returned by 'controller.welcome()' is
@@ -84,8 +83,17 @@ public class UnitTest {
 		// An exception is thrown if the date given by 'controller.welcome()' is
 		// later to date 'now'
 		assertThat(date.after(now), is(false));
-		// It checks that the message returned by 'controller.userdata()' is
+ 	}
+	
+	/**
+	 * This test verificate the correct execution of the method "userdaata()"
+	 * @throws Exception
+	 */
+	@Test
+	public void testUserdata() throws Exception {
+	String view = controller.userdata();
+	// It checks that the message returned by 'controller.userdata()' is
 		// correct ("userdata")
-		assertThat(view2, is("userdata"));
+		assertThat(view, is("userdata"));
  	}
 }
