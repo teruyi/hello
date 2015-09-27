@@ -1,8 +1,10 @@
 package es.unizar.webeng.hello;
 
+/* Imports java utilities */
 import java.util.Date;
 import java.util.Map;
 
+/* Imports the SpringFramework's libraries */
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,14 +49,17 @@ public class HelloController {
 	* the ${key} syntax. When rendering, ${key} is replaced with its value.
 	*
 	* @return The name of the view responsible for rendering the HTML page. 
-	* As "wellcome" is returned, "wellcome.jsp" file will render the page.
+	* As "welcome" is returned, "welcome.jsp" file will render the page.
 	*/
-	
 	public String welcome(Map<String, Object> model) {
-		/* It is made the first entry in the Map. */
+		/* It is made the first entry in the Map. Displays the current date and time, 
+			including the day of the week, the time zone and the Daylight Saving Time
+			or the Winter Time */
 		model.put("time", new Date());
-		/* It is made the second entry in the Map. */
+		/* It is made the second entry in the Map. Displays the message, by default, 
+			his value is defined in the application properties, located in
+			the main app resources */
 		model.put("message", message);
-		return "wellcome";
+		return "welcome";
 	}		
 }
