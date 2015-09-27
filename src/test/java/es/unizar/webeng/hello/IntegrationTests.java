@@ -22,61 +22,70 @@ import static org.hamcrest.CoreMatchers.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 /*
-* SpringApplicationConfiguration is a Class which especifies how to load and configure
-* an ApplicationContext for integration tests.
-*/
+ * SpringApplicationConfiguration is a Class which especifies how to load and
+ * configure an ApplicationContext for integration tests.
+ */
 @SpringApplicationConfiguration(classes = Application.class)
 
 /*
-* @WebAppConfiguration must be present in order to tell Spring that a WebApplicationContext should be loaded for the test
-*/
+ * @WebAppConfiguration must be present in order to tell Spring that a
+ * WebApplicationContext should be loaded for the test
+ */
 @WebAppConfiguration
 
 /**
-* IntegrationTests
-*
-* Program that performs the integration tests of the application 'hello'
-* Integration tests ensure the proper behaviour of the application
-* and are tipically performed after system and unitary testing.
-*
-*/
+ * IntegrationTests
+ *
+ * Program that performs the integration tests of the application 'hello'
+ * Integration tests ensure the proper behaviour of the application and are
+ * tipically performed after system and unitary testing.
+ *
+ */
 public class IntegrationTests {
 
-	  // Autowire relationships between collaborating beans, in this case, Place an instance of WebApplicationContext into wac
-		@Autowired
-	    private WebApplicationContext wac;
+	// Autowire relationships between collaborating beans, in this case, place
+	// an instance of WebApplicationContext into wac
+	@Autowired
+	private WebApplicationContext wac;
 
-		// Default value for message to compare at tests
-		@Value("${app.message:Hello World}")
-		private String message;
+	// Default value for message to compare at tests
+	@Value("${app.message:Hello World}")
+	private String message;
 
-		//Create a new MockMvc object for test which in turn is used perform requests and define expectations.
-		private MockMvc mockMvc;
+	// Create a new MockMvc object for test which in turn is used perform
+	// requests and define expectations.
+	private MockMvc mockMvc;
 
-		/*
-		 * Sentence to be executed before the test, in order to prepare the base architecture for the proper functioning of the tests
-		 */
-	    @Before
-	    public void setup() {
-	    	// Build a MockMvc using the given WebApplicationContext
-	        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
-	    }
-
-		/*
-		 * Integration Test to verify Messages
-		 *
-		 * Running this funtion will execute the integration test on 'hello' application,
-		 * in order to check out the message "message", after requesting a petition, 
-		 * executing an action and verifying the status of the type returned by the 
-		 * request. 
-		 */
-	    @Test
-	    public void testMessage() throws Exception {
-	      // Perform a request and return a type that allows chaining further actions,
-	    	// such as asserting expectations, on the result.
-	    	this.mockMvc.perform(get("/"))						//Perform a petition
-	        	.andDo(print())												//Execute action
-	            .andExpect(status().isOk())								//Verify status is Ok
-	            .andExpect(model().attribute("message", is(message)));	//Verify message equals message after print
-	    }
+	/*
+	 * Sentence to be executed before the test, in order to prepare the base
+	 * architecture for the proper functioning of the tests
+	 */
+	@Before
+	public void setup() {
+		// Build a MockMvc using the given WebApplicationContext
+		this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
 	}
+
+	/**
+	 * Integration Test to verify Messages
+	 *
+	 * Running this method will execute the integration test on 'hello'
+	 * application, in order to check out the message "message", after
+	 * requesting a petition, executing an action and verifying the status of
+	 * the type returned by the request.
+	 */
+	@Test
+	public void testMessage() throws Exception {
+		// Perform a request and return a type that allows chaining further
+		// actions,
+		// such as asserting expectations, on the result.
+		// Perform a petition
+		this.mockMvc.perform(get("/"))
+		// Execute action
+				.andDo(print()) 
+				// Verify status is Ok
+				.andExpect(status().isOk()) 
+				// Verify attribute "message" in the model equals to the value in the field message
+				.andExpect(model().attribute("message", is(message))); 
+	}
+}
