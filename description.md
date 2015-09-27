@@ -147,6 +147,8 @@ You may find some [Spring Java annotations](http://docs.spring.io/spring/docs/cu
 * **@Value("${property:default_value}"): if the specified property exists, its value is assigned to a variable. Otherwise, the default value is assigned to that variable. It must be a variable annotation.
 * **@Before**: declares that a function should be executed before running the tests. It must be a function annotation.
 * **@Test**: declares that a function is a test. It must be a function annotation.
+* **@Scheduled**: declares that a function is going to be executed periodically.
+* **@EnableScheduling**: declares that an application can run programmed tasks.
 
 ##Java Anotations
 Java defines a set of annotations that are built into the language.
