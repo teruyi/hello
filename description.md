@@ -149,6 +149,9 @@ In the case of Github, it allows you to set custom webhooks so, when something h
 
 This is how Travis works. Travis set up a webhook on your repository, so when your code changes, Travis servers receive a request and then, build your updated code. Although Travis works with Github, if they add support for custom webhooks, it would be easy to create your owns (You would have only to make HTTP requests to Travis). 
 
+###Adding code coverage measure
+Since we are using JaCoCo to calculate code coverage in this project and Travis CI doesn't support this tool, we have to use a tool called [codecov](https://codecov.io) in order to see the reports of JaCoCo. To use codecov, we must simply sing up in https://codecov.io with our github account and grant access to the repository. Once done, with this code we will be able to add a badge with code coverage.
+[![codecov.io](http://codecov.io/github/Adriem/hello/coverage.svg?branch=master)](http://codecov.io/github/Adriem/hello?branch=master)
 
 ###gitignore
 
