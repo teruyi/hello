@@ -237,3 +237,41 @@ This is used in "welcome.jsp"
 ###Obtain client's System Information 
 We can obtain de client's IP system information, using "request.getHeader("User-Agent")".
 This is used in "welcome.jsp"
+
+
+##Heroku
+
+### What is it?
+Heroku is a cloud-platform for automatic deployment. 
+Every time your code changes in your GitHub repository, Heroku notices it, builds your app and deploys it on the cloud; you only have to push your changes.
+
+###Set-up Heroku in your repo
+1. Register on www.heroku.com and create a new App.
+2. Connect it to your Github repo and enable "Atomatic Deploys".
+3. Put your Heroku App URL on the README.md table
+4. Done!
+
+###How does it work?
+ 1. You made a push to your github repository.
+ 2. Using webhooks, Heroku notices it.
+ 3. Heroku executes "stage" task of the build.gradle file (It builds the project and generates production code)
+ 4. Heroku reads "Procfile" file in order to know how to execute your app.
+ 5. Voila! Your app is running on the cloud.
+
+###Project changes
+
+A few changes have been made on the project files to allow it.
+
+**build.gradle:**
+
+A "stage" task has been added. This tasks fires the "build" and "installApp" tasks. "installApp" task  generates production-ready files on "/dist" directory. This directory contains .jar files and a bash script file that is used to bootstrap the application.
+
+**Procfile:**
+
+In this file, we tell Heroku how to run our app. In this case, it executes the bash script file in "dist/bin" as a web app.
+
+**settings.gradle:**
+
+This file has been added in order to specify the project name. Without it, "installApp" task doesn't work well.
+
+
