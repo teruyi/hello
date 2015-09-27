@@ -1,0 +1,1 @@
+web:  JAVA_OPTS="-Dserver.port=$PORT" ; dist/bin/hello 

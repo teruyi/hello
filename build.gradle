@@ -101,3 +101,12 @@ test {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.2.1'
 }
+
+installApp{ 
+        destinationDir = file('dist') 
+} 
+
+
+task stage(dependsOn: [installApp]) {
+   
+}

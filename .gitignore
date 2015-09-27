@@ -6,6 +6,6 @@
 /.settings/
 /.classpath
 /.project
-
+/dist/
 #VIM buffer files
 .*.swp
