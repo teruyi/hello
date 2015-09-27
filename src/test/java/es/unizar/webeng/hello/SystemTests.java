@@ -138,8 +138,8 @@ public class SystemTests {
 		// Information given by a GET petition to the URL specified by the first
 		// parameter
 		// is stored on an ResponseEntity.
-		ResponseEntity<String> entity = new TestRestTemplate()
-				.getForEntity("http://localhost:" + +this.port + "/images/Head.png", String.class);
+		ResponseEntity<byte[]> entity = new TestRestTemplate()
+				.getForEntity("http://localhost:" + +this.port + "/images/Head.png", byte[].class);
 
 		// Check if the StatusCOde is equal to 200 (HttpStatus.OK) which is the
 		// standard response
