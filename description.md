@@ -244,6 +244,7 @@ This is used in "welcome.jsp"
 ### What is it?
 Heroku is a cloud-platform for automatic deployment. 
 Every time your code changes in your GitHub repository, Heroku notices it, builds your app and deploys it on the cloud; you only have to push your changes.
+With this tool, everybody can see the status of your project without having to build and run it locally.
 
 ###Set-up Heroku in your repo
 1. Register on www.heroku.com and create a new App.

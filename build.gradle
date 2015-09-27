@@ -108,8 +108,8 @@ installApp{
 } 
 
 //This task is called by Heroku on every github push.
-//It only declares that needs "installApp" task to run
+//It only declares that needs "build" and installApp" task to run
 //InstallApp tasks prepare production files that are going to be executed
 task stage(dependsOn: [build,installApp]) {
-   //This task only declares that needs "installApp" to run
+ 
 }
