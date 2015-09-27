@@ -1,4 +1,5 @@
-buildscript { // This block defines the dependencies of the build script itself.
+// This block defines the dependencies of the build script itself.
+buildscript { 
 
     // The repositories block indicates that the build should resolve its dependencies from the Maven
     // Central repository. Gradle leans heavily on many conventions and facilities established by the
