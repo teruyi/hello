@@ -247,8 +247,8 @@ Every time your code changes in your GitHub repository, Heroku notices it, build
 With this tool, everybody can see the status of your project without having to build and run it locally.
 
 ###Set-up Heroku in your repo
-1. Register on www.heroku.com and create a new App.
-2. Connect it to your Github repo and enable "Atomatic Deploys".
+1. Register on [www.heroku.com](http://www.heroku.com) and create a new App.
+2. Connect it to your Github repo and enable "Automatic Deploys".
 3. Put your Heroku App URL on the README.md table
 4. Done!
 
