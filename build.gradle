@@ -1,4 +1,4 @@
-buildscript {
+buildscript { // This block defines the dependencies of the build script itself.
 
     // The repositories block indicates that the build should resolve its dependencies from the Maven
     // Central repository. Gradle leans heavily on many conventions and facilities established by the
@@ -22,6 +22,7 @@ apply plugin: 'eclipse-wtp'
 apply plugin: 'idea'
 apply plugin: 'spring-boot' 
 apply plugin: 'io.spring.dependency-management' 
+apply plugin: 'jacoco' //Plugin to calculate code coverage
 
 // The jar block specifies how the JAR file will be named. In this case, it will render hello-1.0.jar.
 
@@ -29,8 +30,16 @@ jar {
     baseName = 'hello'
     version = '1.0'
 }
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+
+sourceCompatibility = 1.8 // Java version compatibility to use when compiling java source
+targetCompatibility = 1.8 // Java version to generate clases for
+
+// The war block specifies how the WAR file will be named. In this case, it will render hello-1.0.jar.
+
+war {
+    baseName = 'hello'
+    version = '1.0'
+}
 
 repositories {
     mavenCentral()
@@ -45,6 +54,8 @@ dependencies {
     compile 'org.webjars:bootstrap:3.3.5'
     compile 'org.webjars:jquery:2.1.4'    
 
+    // 'providedRuntime' dependencies are not added to the WAR archive
+    // because they should already be in the execution environment
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
 
@@ -62,6 +73,23 @@ eclipse {
              }
          }
     }
+}
+
+// This task will generate a report file under $buildDir/reports/jacoco/test
+// with code coverage stats. It will generate files in xml and html formats.
+// Note that this task will be skipped if no test are run (e.g., if test are UP TO DATE)
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        csv.enabled = false
+        html.enabled = true
+    }
+}
+
+test {
+    // Try to run jacocoTestReport on test end (even if it fails)
+    finalizedBy jacocoTestReport
 }
 
 // The following task provides the Gradle Wrapper to the project. The Gradle Wrapper consists of

@@ -1,6 +1,7 @@
 package es.unizar.webeng.hello;
 
 /*
+* Imports the SpringFramework's libraries 
 * SpringApplication contains a group of classes that can be used to bootstrap and
 * launch a Spring application from the main method in Java.
 *
@@ -14,7 +15,6 @@ package es.unizar.webeng.hello;
 * SpringBootServletInitializer binds an application that starts a Spring Boot with the servlet
 * and filter mappings.
 */
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -41,18 +41,17 @@ public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
 
-	/*Initializes the server/application using the imported Spring classes. It has two parameters:
-	 *The first parameter is the Object of the class itself
-	 *The second parameter contains any argument that the Spring application might need. 
-	 *Nonetheless a SpringApplication instance can also be created without passing the .class object
-	 */
+		/*Initializes the server/application using the imported Spring classes. It has two parameters:
+		 *The first parameter is the Object of the class itself
+		 *The second parameter contains any argument that the Spring application might need. 
+		 *Nonetheless a SpringApplication instance can also be created without passing the .class object
+		 */
         SpringApplication.run(Application.class, args);
     }
     
     @Override
    /**
-	* Overwrite configure method in order to customize 
-	* the configuration of this application.
+	* Overwrite configure method in order to customize the configuration of this application.
 	* Sources or config classes can be added. 
 	*
 	* @param application 
