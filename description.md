@@ -27,7 +27,7 @@ The project follows the recommended conventions about packaging and directories 
              |--unizar
                |--webeng
                   |--hello
-                     |--IntegrationTests.java 
+                     |--IntegrationTests.java
                      |--SystemTests.java
                      |--UnitTest.java
 
@@ -43,9 +43,9 @@ Assuming that you have set up gradle in your computer type in your console:
 
 	$ cd hello
 	$ gradle build
-	
+
 ###Testing your code
-Testing your code is very easy. 
+Testing your code is very easy.
 
 	$ cd hello
 	$ gradle test
@@ -64,15 +64,14 @@ If you are not able to merge your improvements on the code with your updated res
 * Identifying the conflict:
   * When there is a conflict, you will see on the console where it is (There may be more than one).
 * Now you need to open the file in conflict with any text editor and you will see that some words have appeared in this file and it will have the next format:
-
-	any content
-	<<<<< HEAD  
-	your content  
-	=====  
-	other content
-	 
-	 \>>>>>upstream/master
- 
+```
+    any content
+    <<<<< HEAD
+    your content
+    =====
+    other content
+    \>>>>>upstream/master
+```
 As you can see, `your content`  refers to what you wrote, and `other content` refers to what other people wrote, the rest added are conflict markers. Here you have a few options; you can keep your changes by
 deleting `other content` , you can use `other content` instead of `your content` or you can make a new change. You always need to keep on mind the option you take must satisfy both parts, you and them, and it must make sense. Then you can delete the conflict markers.
 
@@ -101,15 +100,9 @@ A blank line matches no files, so it can serve as a separator for readability.
 A line starting with # serves as a comment. Put a backslash ("\") in front of the first hash for patterns that begin with a hash.
 
 Trailing spaces are ignored unless they are quoted with backslash ("\").
-<<<<<<< HEAD
 
 An optional prefix "!" which negates the pattern; any matching file excluded by a previous pattern will become included again. It is not possible to re-include a file if a parent directory of that file is excluded. Git doesn’t list excluded directories for performance reasons, so any patterns on contained files have no effect, no matter where they are defined. Put a backslash ("\") in front of the first "!" for patterns that begin with a literal "!", for example, "\!important!.txt".
 
-=======
-
-An optional prefix "!" which negates the pattern; any matching file excluded by a previous pattern will become included again. It is not possible to re-include a file if a parent directory of that file is excluded. Git doesn’t list excluded directories for performance reasons, so any patterns on contained files have no effect, no matter where they are defined. Put a backslash ("\") in front of the first "!" for patterns that begin with a literal "!", for example, "\!important!.txt".
-
->>>>>>> upstream/master
 If the pattern ends with a slash, it is removed for the purpose of the following description, but it would only find a match with a directory. In other words, foo/ will match a directory foo and paths underneath it, but will not match a regular file or a symbolic link foo (this is consistent with the way how pathspec works in general in Git).
 
 If the pattern does not contain a slash /, Git treats it as a shell glob pattern and checks for a match against the pathname relative to the location of the .gitignore file (relative to the toplevel of the work tree if not from a .gitignore file).
@@ -191,7 +184,7 @@ It allows to those third-party services to easily know when a change has been ma
 
 In the case of Github, it allows you to set custom webhooks so, when something happens in your repository (like a pull, push) , an HTTP POST is made to the provided URL. It is very useful for [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) tools, like Travis. To view what webhooks are set-up on your repository, go to Settings -> Webhook & Services.
 
-This is how Travis works. Travis set up a webhook on your repository, so when your code changes, Travis servers receive a request and then, build your updated code. Although Travis works with Github, if they add support for custom webhooks, it would be easy to create your owns (You would have only to make HTTP requests to Travis). 
+This is how Travis works. Travis set up a webhook on your repository, so when your code changes, Travis servers receive a request and then, build your updated code. Although Travis works with Github, if they add support for custom webhooks, it would be easy to create your owns (You would have only to make HTTP requests to Travis).
 
 ###Adding code coverage measure
 
@@ -232,24 +225,6 @@ jQuery is a cross-platform JavaScript library designed to simplify the client-si
 ###What does jQuery in this project?
 jQuery provides to the main JSP page of the project, a simple way to make the client-side scripting of HTML, showing the time and the message generated by the server-side app.
 
-###Using Branches
-A branch represent an independent line of devlopment which allows to isolate changes from the main line of 
-development. Usually is used when a developer wants to add a new feature or fix a bug. He spawns a new branch to 
-encapsulate the code's changes, which would make sure that unstable code is never commit to the main code.
-
-#####Usage
-* List all of the branches in the repository: <code>git branch</code>
-* Create a branch: <code>git branch <branch's name> </code>, this command only create a new branch, if you want 
-  start adding commits to it, you need to select it.
-* Navigate between the differents branch in a proyect: <code>git checkout <branch's name></code>
-* Merge one branch with the current branch: <code>git merge <branch's name></code>
-* Delete a branch: <code> git branch -d <branch's name></code>
-
-Here is another interesting command that you can use:
-* Create a branch and move to it: <code>git checkout -b <branch's name></code>
-* See the differences between two branchs: <code>git diff --stat <branch 1> <branch 2></code>
-* Undo a merge: <code>git reset --hard HEAD</code>
-
 ###RequestMethod
 It's possible diference between a POST and a GET request. We only have to indicates it in the @RequestMapping.
 Example: @RequestMapping(value="/", method=RequestMethod.POST)
@@ -259,19 +234,19 @@ This is used in HelloController.java
 We can obtain de client's IP address or the latest proxy which he used, using "request.getRemoteAddr()".
 This is used in "welcome.jsp"
 
-###Obtain client's System Information 
+###Obtain client's System Information
 We can obtain de client's IP system information, using "request.getHeader("User-Agent")".
 This is used in "welcome.jsp"
 
 
 ###Using Branches
-A branch represent an independent line of devlopment which allows to isolate changes from the main line of 
-development. Usually is used when a developer wants to add a new feature or fix a bug. He spawns a new branch to 
+A branch represent an independent line of devlopment which allows to isolate changes from the main line of
+development. Usually is used when a developer wants to add a new feature or fix a bug. He spawns a new branch to
 encapsulate the code's changes, which would make sure that unstable code is never commit to the main code.
 
 #####Usage
 * List all of the branches in the repository: <code>git branch</code>
-* Create a branch: <code>git branch <branch's name> </code>, this command only create a new branch, if you want 
+* Create a branch: <code>git branch <branch's name> </code>, this command only create a new branch, if you want
   start adding commits to it, you need to select it.
 * Navigate between the differents branch in a proyect: <code>git checkout <branch's name></code>
 * Merge one branch with the current branch: <code>git merge <branch's name></code>
@@ -281,5 +256,3 @@ Here is another interesting command that you can use:
 * Create a branch and move to it: <code>git checkout -b <branch's name></code>
 * See the differences between two branchs: <code>git diff --stat <branch 1> <branch 2></code>
 * Undo a merge: <code>git reset --hard HEAD</code>
-
-
