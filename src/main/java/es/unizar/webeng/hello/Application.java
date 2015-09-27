@@ -41,10 +41,11 @@ public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
 
-	/*Initializes the server/application using the imported Spring classes. It has two parameters:
-	 *The first parameter is the Object of the class itself
-	 *The second parameter contains any argument that the Spring application might need. 
-	 *Nonetheless a SpringApplication instance can also be created without passing the .class object
+	/* 
+	 * Initializes the server/application using the imported Spring classes. It has two parameters:
+	 * The first parameter is the Object of the class itself
+	 * The second parameter contains any argument that the Spring application might need. 
+	 * Nonetheless a SpringApplication instance can also be created without passing the .class object
 	 */
         SpringApplication.run(Application.class, args);
     }
