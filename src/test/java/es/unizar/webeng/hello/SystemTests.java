@@ -109,5 +109,22 @@ public class SystemTests {
 						.getContentType());
 	}	
 	
+	/**
+         * Method that can be executed in otder to test if Head.png is being served.
+         * @throws Exception if the image is not being served
+	 */
+	@Test
+	public void testHead() throws Exception {
+
+		// Information fiven by a GET petition to the URL specified by the first parameter
+		// is stored on an ResponseEntity.
+		ResponseEntity<String> entity = new TestRestTemplate().getForEntity("http://localhost:" +
+		+ this.port + "/images/Head.png", String.class);
+		
+		// Check if the StatusCOde is equal to 200 (HttpStatus.OK) which is the standard response
+		// for succesful HTTP requests. If correct, it means that is available to connect and the
+		// connection has been succesful.
+		assertEquals(HttpStatus.OK, entity.getStatusCode());
+	}
 	
 }
