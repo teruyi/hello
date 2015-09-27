@@ -118,8 +118,8 @@ public class SystemTests {
 
 		// Information fiven by a GET petition to the URL specified by the first parameter
 		// is stored on an ResponseEntity.
-		ResponseEntity<byte[]> entity = new TestRestTemplate().getForEntity("http://localhost:" +
-		+ this.port + "/images/Head.png", byte[].class);
+		ResponseEntity<byte[]> entity = new TestRestTemplate()
+			.getForEntity("http:/" + "/localhost:" + this.port + "/images/Head.png", byte[].class);
 		
 		// Check if the StatusCode is equal to 200 (HttpStatus.OK) which is the standard response
 		// for succesful HTTP requests. If correct, it means that is available to connect and the
@@ -127,13 +127,13 @@ public class SystemTests {
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 
 		// Checks if the body of the GET petition is correct (contains the word 'Head.png')
-		// assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody().contains("Head.png"));
+		//assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody().contains("a")); byte[] havn't .contains
 
 		// Checks if the 'Content-type' field of the GET petition is correct. This means,
 		// the returned entity is a PNG file. If the verification is not positive it throws
 		// an error with the given message.
-		//assertEquals("Wrong content type:\n" + entity.getHeaders().getContentType(),
-		//	MediaType.valueOf("*"), entity.getHeaders().getContentType());
+		assertEquals("Wrong content type:\n" + entity.getHeaders().getContentType(),
+			MediaType.valueOf("*/*"), entity.getHeaders().getContentType());
 	}
 	
 }
