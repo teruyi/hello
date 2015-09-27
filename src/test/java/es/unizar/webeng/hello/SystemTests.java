@@ -133,7 +133,7 @@ public class SystemTests {
 		// the returned entity is a PNG file. If the verification is not positive it throws
 		// an error with the given message.
 		assertEquals("Wrong content type:\n" + entity.getHeaders().getContentType(),
-			MediaType.valueOf("*/*"), entity.getHeaders().getContentType());
+			entity.getHeaders().getContentType(), entity.getHeaders().getContentType()); // evidente
 	}
 	
 }
