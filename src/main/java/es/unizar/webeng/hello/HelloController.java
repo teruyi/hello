@@ -52,7 +52,7 @@ public class HelloController {
 	* the ${key} syntax. When rendering, ${key} is replaced with its value.
 	*
 	* @return The name of the view responsible for rendering the HTML page. 
-	* As "wellcome" is returned, "wellcome.jsp" file will render the page.
+	* As "welcome" is returned, "welcome.jsp" file will render the page.
 	*/
 	public String welcome(Map<String, Object> model) {
 		// Each request to the root path is counted
@@ -65,7 +65,7 @@ public class HelloController {
 			his value is defined in the application properties, located in
 			the main app resources */
 		model.put("message", message);
-		return "wellcome";
+		return "welcome";
 	}		
 
 	/**
