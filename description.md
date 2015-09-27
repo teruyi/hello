@@ -101,9 +101,15 @@ A blank line matches no files, so it can serve as a separator for readability.
 A line starting with # serves as a comment. Put a backslash ("\") in front of the first hash for patterns that begin with a hash.
 
 Trailing spaces are ignored unless they are quoted with backslash ("\").
+<<<<<<< HEAD
 
 An optional prefix "!" which negates the pattern; any matching file excluded by a previous pattern will become included again. It is not possible to re-include a file if a parent directory of that file is excluded. Git doesn’t list excluded directories for performance reasons, so any patterns on contained files have no effect, no matter where they are defined. Put a backslash ("\") in front of the first "!" for patterns that begin with a literal "!", for example, "\!important!.txt".
 
+=======
+
+An optional prefix "!" which negates the pattern; any matching file excluded by a previous pattern will become included again. It is not possible to re-include a file if a parent directory of that file is excluded. Git doesn’t list excluded directories for performance reasons, so any patterns on contained files have no effect, no matter where they are defined. Put a backslash ("\") in front of the first "!" for patterns that begin with a literal "!", for example, "\!important!.txt".
+
+>>>>>>> upstream/master
 If the pattern ends with a slash, it is removed for the purpose of the following description, but it would only find a match with a directory. In other words, foo/ will match a directory foo and paths underneath it, but will not match a regular file or a symbolic link foo (this is consistent with the way how pathspec works in general in Git).
 
 If the pattern does not contain a slash /, Git treats it as a shell glob pattern and checks for a match against the pathname relative to the location of the .gitignore file (relative to the toplevel of the work tree if not from a .gitignore file).
@@ -243,3 +249,4 @@ Here is another interesting command that you can use:
 * Create a branch and move to it: <code>git checkout -b <branch's name></code>
 * See the differences between two branchs: <code>git diff --stat <branch 1> <branch 2></code>
 * Undo a merge: <code>git reset --hard HEAD</code>
+=======
