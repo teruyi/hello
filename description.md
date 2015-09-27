@@ -173,7 +173,7 @@ Besides, codecov also supports badges with code coverage measures with this code
 ```
 [![codecov.io](http://codecov.io/github/UNIZAR-30246-WebEngineering/hello/coverage.svg?branch=master)](http://codecov.io/github/UNIZAR-30246-WebEngineering/hello?branch=master)
 ```
-(This code is for Markdown files. For HTML or other languages, check https://codecov.io
+(This code is for Markdown files. For HTML or other languages, check [codecov's site](https://codecov.io))
 
 ###gitignore
 
