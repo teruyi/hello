@@ -61,7 +61,6 @@ public class HelloController {
 			his value is defined in the application properties, located in
 			the main app resources */
 		model.put("message", message);
-<<<<<<< HEAD
 		return "wellcome";
 	}
 	
@@ -75,8 +74,5 @@ public class HelloController {
 	@RequestMapping(value="/", method=RequestMethod.POST
 	public String clientdata(){
 		return "clientdata";
-=======
-		return "welcome";
->>>>>>> upstream/master
 	}		
 }

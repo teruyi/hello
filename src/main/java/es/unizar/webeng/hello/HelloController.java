@@ -71,7 +71,7 @@ public class HelloController {
  	* @return The name of the view responsible for rendering the HTML page. 
 	* As "userdata" is returned, "userdata.jsp" file will render the page.
 	*/
-	@RequestMapping(value="/", method=RequestMethod.POST
+	@RequestMapping(value="/", method=RequestMethod.POST)
 	public String clientdata(){
 		return "clientdata";
 	}		
