@@ -102,11 +102,14 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.2.1'
 }
 
+//When installApp task is fired, it will create production files on dist/ folder
 installApp{ 
         destinationDir = file('dist') 
 } 
 
-
+//This task is called by Heroku on every github push.
+//It only declares that needs "installApp" task to run
+//InstallApp tasks prepare production files that are going to be executed
 task stage(dependsOn: [installApp]) {
-   
+   //This task only declares that needs "installApp" to run
 }
