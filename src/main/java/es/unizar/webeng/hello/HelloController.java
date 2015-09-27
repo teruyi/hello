@@ -61,7 +61,7 @@ public class HelloController {
 			his value is defined in the application properties, located in
 			the main app resources */
 		model.put("message", message);
-		return "wellcome";
+		return "welcome";
 	}
 	
 	/**

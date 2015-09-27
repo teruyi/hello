@@ -72,7 +72,7 @@ public class HelloController {
 	* As "userdata" is returned, "userdata.jsp" file will render the page.
 	*/
 	@RequestMapping(value="/", method=RequestMethod.POST)
-	public String clientdata(){
-		return "clientdata";
+	public String userdata(){
+		return "userdata";
 	}		
 }
