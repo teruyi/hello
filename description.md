@@ -249,3 +249,5 @@ Here is another interesting command that you can use:
 * Create a branch and move to it: <code>git checkout -b <branch's name></code>
 * See the differences between two branchs: <code>git diff --stat <branch 1> <branch 2></code>
 * Undo a merge: <code>git reset --hard HEAD</code>
+
+
