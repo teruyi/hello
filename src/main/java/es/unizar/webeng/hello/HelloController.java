@@ -8,6 +8,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.scheduling.annotation.Scheduled;
 
 /*
  * This annotation indicates that HelloController takes the 
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HelloController {
 	
+	private int countReq = 0;	//Request counter
+	private int secondsRunning = 0;	//Seconds running the app
 	/*
     * This annotation is used to set a default value from properties file
 	*/
@@ -52,6 +55,8 @@ public class HelloController {
 	* As "wellcome" is returned, "wellcome.jsp" file will render the page.
 	*/
 	public String welcome(Map<String, Object> model) {
+		// Each request to the root path is counted
+		this.countReq += 1;
 		/* It is made the first entry in the Map. Displays the current date and time, 
 			including the day of the week, the time zone and the Daylight Saving Time
 			or the Winter Time */
@@ -62,4 +67,33 @@ public class HelloController {
 		model.put("message", message);
 		return "wellcome";
 	}		
+
+	/**
+	* The @Scheduled annotation indicates this method can be performed periodically according to
+	* the parameter that is assigned milliseconds.
+	*/
+	@Scheduled(fixedRate = 15000)
+
+	/** 
+	* This method shows on console information about the apps's execution such as the actual date,
+	* the time it has been running and the number of requests that have been made to the root page. 
+	* It is called every 15 seconds.
+	*/
+	public void infoServer(){
+		System.out.println(new Date() + ": Server has been running for " + secondsRunning + " seconds");
+		System.out.println(countReq + " resquests have been made since the server started");
+		System.out.println();
+	}
+
+	/**
+	* The @Scheduled annotation indicates this method can be performed periodically according to
+	* the parameter that is assigned milliseconds.
+	*/
+	@Scheduled(fixedRate = 1000)
+	/** 
+	* This method increments the seconds the server has been running by one every one second.
+	*/
+	public void updateMilisRunning(){
+		this.secondsRunning += 1;
+	}	
 }
