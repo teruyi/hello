@@ -235,7 +235,6 @@ This is used in HelloController.java
 We can obtain de client's IP address or the latest proxy which he used, using "request.getRemoteAddr()".
 This is used in "welcome.jsp"
 
-###request.getRemoteAddr()
 ###Obtain client's System Information 
 We can obtain de client's IP system information, using "request.getHeader("User-Agent")".
 This is used in "welcome.jsp"
