@@ -53,8 +53,9 @@ public class SystemTests {
 
 	/**
 	* Method that can be executed in order to test the connection to the Home page
-	* If something goes wrong this method throws an Exception
-	* @throws Exception
+	* If something goes wrong (the connection fails or the page has a wrong body),
+	* this method throws an Exception
+	* @throws Exception if the connection has failed or the page has a wrong body.
 	*/
 	@Test
 	public void testHome() throws Exception {
@@ -74,22 +75,35 @@ public class SystemTests {
 
 	/**
 	* Method that can be executed in order to test the connection to styles sheet
-	* If something goes wrong this method throws an Exception
-	* @throws Exception
+	* If the connection goes wrong or the css is not well formed, this method throws an Exception
+	* @throws Exception if the connection to the styles sheet is wrong or if it's bad formed.
 	*/
 	@Test
 	public void testCss() throws Exception {
 
 		// Information given by a GET petition to the URL specified by the first parameter
-		// is stored on an Entity
+		// is stored on an ResponseEntity.
 		ResponseEntity<String> entity = new TestRestTemplate().getForEntity(
 				"http://localhost:" + this.port
 						+ "/webjars/bootstrap/3.3.5/css/bootstrap.min.css", String.class);
 
-		// Checkings to verify that it is available to connect, 
-		// connection has been successful and it contains a correct css format
+		// Checkings to verify the correctness of the connexion with these three assertions who will
+		// return an exception if one of them is not correct.
+		
+		// Check if the StatusCode is equal to 200 (HttpStatus.OK) which is the standard response
+		// for succesful HTTP requests. If correct, it means that is available to connect and the 
+		// connection has been succesful.
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
+		
+		// These assertion check if the information given by the GET petition (if the body of the GET petition is  
+		// correct(contains the word 'body')), which has been saved in an entity, contains a correct css format. 
+		// For more information about CSS (Cascading Style Sheets), you can read about it in the 
+		// W3 webpage (http://www.w3.org/TR/CSS/) or in the W3 schools webpage (http://www.w3schools.com/css/)
+		// If the verification is not positive it throws an error with the given message.
 		assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody().contains("body"));
+		
+		// Checks if the 'Content-type' field of the GET petition is correct.
+		// If the verification is not positive it throws an error with the given message.
 		assertEquals("Wrong content type:\n" + entity.getHeaders().getContentType(),
 				MediaType.valueOf("text/css;charset=UTF-8"), entity.getHeaders()
 						.getContentType());

@@ -51,8 +51,30 @@ Testing your code is very easy.
 
 The later command will compile normal and tests classes in your project. Then test classes will be executed and tested.
 Error message will appear in the screen if something has gone wrong.
+
+####Code coverage
+Code coverage is measured with JaCoCo in gradle. After tests are run, a task called jacocoTestReport is run and some reports are generated under /build/reports/jacoco/test.
 	
-	
+###Conflicts on merge process?
+If you are not able to merge your improvements on the code with your updated respository, don't panic  and stop typing random commands, this may help you.  Once you have added and committed your local files you will have to synchronize your forked repository  with your upstream repository and here is where you might find conflicts in some of the files. Solving  this issues is easy:
+
+* Identifying the conflict:
+  * When there is a conflict, you will see on the console where it is (There may be more than one).
+* Now you need to open the file in conflict with any text editor and you will see that some words have appeared in this file and it will have the next format:
+
+     any content  
+     <<<<< HEAD  
+     your content  
+     =====  
+     other content
+     
+     \>>>>>upstream/master
+ 
+As you can see, `your content`  refers to what you wrote, and `other content` refers to what other people wrote, the rest added are conflict markers. Here you have a few options; you can keep your changes by
+deleting `other content` , you can use `other content` instead of `your content` or you can make a new change. You always need to keep on mind the option you take must satisfy both parts, you and them, and it must make sense. Then you can delete the conflict markers.
+
+* Repeat process above with all the conflicts you have.
+* You are now ready to do `add` and `commit` , synchronize your repository again with the upstream, and `push` , you can check the [wiki](https://github.com/UNIZAR-30246-WebEngineering/hello/wiki) to do this task.
 
 ###Spring Framework Annotations
 You may find some [Spring Java annotations](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/package-tree.html) in specific pieces of code. The following annotations are used in this project:
@@ -129,3 +151,79 @@ It allows to those third-party services to easily know when a change has been ma
 In the case of Github, it allows you to set custom webhooks so, when something happens in your repository (like a pull, push) , an HTTP POST is made to the provided URL. It is very useful for [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) tools, like Travis. To view what webhooks are set-up on your repository, go to Settings -> Webhook & Services.
 
 This is how Travis works. Travis set up a webhook on your repository, so when your code changes, Travis servers receive a request and then, build your updated code. Although Travis works with Github, if they add support for custom webhooks, it would be easy to create your owns (You would have only to make HTTP requests to Travis). 
+
+###Adding code coverage measure
+
+[![codecov.io](http://codecov.io/github/UNIZAR-30246-WebEngineering/hello/coverage.svg?branch=master)](http://codecov.io/github/UNIZAR-30246-WebEngineering/hello?branch=master)
+
+Since we are using JaCoCo to calculate code coverage in this project and Travis
+CI doesn't support this tool, we have to use an external tool called codecov in
+order to see the reports of code coverage. To use this tool, we must simply sign
+up in https://codecov.io with our github account and grant access to the
+repository. Once done, we have to add these lines to our .travis.yml file:
+```
+before_install:
+  - pip install --user codecov
+after_success:
+  - codecov
+```
+And it's done! Now we have access to the code coverage reports on codecov's page.
+
+Besides, codecov also supports badges with code coverage measures with this code:
+```
+[![codecov.io](http://codecov.io/github/UNIZAR-30246-WebEngineering/hello/coverage.svg?branch=master)](http://codecov.io/github/UNIZAR-30246-WebEngineering/hello?branch=master)
+```
+(This code is for Markdown files. For HTML or other languages, check [codecov's site](https://codecov.io))
+
+###gitignore
+
+* **Description**
+
+Git uses this file to determinate which files and directories to ignore, before making a commit. From time to time, there are files you don`t want Git to check in to GitHub, and here is the utility of this file.
+
+Each line in a gitignore file specifies a pattern. When deciding whether to ignore a path, Git normally checks gitignore patterns from multiple sources, with the following order of precedence, from highest to lowest (within one level of precedence, the last matching pattern decides the outcome). This means the following, if we have this patterns in our gitignore file:
+
+* **Example**
+
+!/foo/bar
+/foo/*
+
+It says, dont ignore /foo/bar and ignore everything that begins with /foo. /foo/bar won`t be ignored because its pattern is higher in the order of precedende.
+
+* **Pattern Format**
+
+A blank line matches no files, so it can serve as a separator for readability.
+
+A line starting with # serves as a comment. Put a backslash ("\") in front of the first hash for patterns that begin with a hash.
+
+Trailing spaces are ignored unless they are quoted with backslash ("\").
+
+An optional prefix "!" which negates the pattern; any matching file excluded by a previous pattern will become included again. It is not possible to re-include a file if a parent directory of that file is excluded. Git doesn’t list excluded directories for performance reasons, so any patterns on contained files have no effect, no matter where they are defined. Put a backslash ("\") in front of the first "!" for patterns that begin with a literal "!", for example, "\!important!.txt".
+
+If the pattern ends with a slash, it is removed for the purpose of the following description, but it would only find a match with a directory. In other words, foo/ will match a directory foo and paths underneath it, but will not match a regular file or a symbolic link foo (this is consistent with the way how pathspec works in general in Git).
+
+If the pattern does not contain a slash /, Git treats it as a shell glob pattern and checks for a match against the pathname relative to the location of the .gitignore file (relative to the toplevel of the work tree if not from a .gitignore file).
+
+Otherwise, Git treats the pattern as a shell glob suitable for consumption by fnmatch(3) with the FNM_PATHNAME flag: wildcards in the pattern will not match a / in the pathname. For example, "Documentation/*.html" matches "Documentation/git.html" but not "Documentation/ppc/ppc.html" or "tools/perf/Documentation/perf.html".
+
+A leading slash matches the beginning of the pathname. For example, "/*.c" matches "cat-file.c" but not "mozilla-sha1/sha1.c".
+
+* **Notes**
+
+The purpose of gitignore files is to ensure that certain files not tracked by Git remain untracked. To stop tracking a file that is currently tracked, use git rm --cached.
+
+
+###Bootstrap
+Bootstrap is a common Framework for HTML, CSS and Javascript used for developing Web Applications. It
+contains templates with formularies, buttons and other kind of design components as well as functionalities to make a responsive application.
+#####Glyphicon Components
+  Bootstrap includes a set of glyphs components that can be used to improve the web's design. They are
+  monochromatic icons and symbols in order to enrich the usability of the web by making the navigation
+  clearer and easier. Theses glyphs are usually not available for free but their creator made them free
+  for Bootstrap. You can find more information going to [Glyphicons](http://glyphicons.com).
+
+###jQuery
+jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. jQuery defines itself as a lightweight, "write less, do more", JavaScript library. The main purpose of jQuery is to make it much easier to use JavaScript. This library makes things like HTML manipulation, event handling, animation and Ajax much simpler with an API that works across several browsers. It's the most popular JavaScript in use today, with several top websites using it.
+
+#####What does jQuery in this project?
+jQuery provides to the main JSP page of the project, a simple way to make the client-side scripting of HTML, showing the time and the message generated by the server-side app.

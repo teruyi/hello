@@ -62,26 +62,24 @@ public class UnitTest {
 	  * is correct or not). Failing in any of the test will result on an excepcion, 
 	  * thrown by the function.
 	  *
-	  * @param
-	  * @return
 	  * @throws Exception
 	  */
     @Test
     public void testMessage() throws Exception {
     	HashMap<String,Object> map = new HashMap<>();		
     	String view = controller.welcome(map);
-			Date now = new Date();
+		Date now = new Date();
 
-			// Check that the messages are correct
+		// It checks that the message returned by 'controller.welcome()' is correct ("welcome")
     	assertThat(view, is("wellcome"));
+    	// It checks  that the field 'message' has been added succesfully to the map
     	assertThat(map.containsKey("message"), is(true));
-
-			// Check that the time field contain a Date object
+		// Check that the time field contain a Date object
     	assertThat(map.get("time"), instanceOf(Date.class));
-
-			// Check that the Date is correct
-			Date date=((Date)map.get("time"));
-			assertThat(date.after(now), is(false));
+		// Check that the Date is correct
+		Date date=((Date)map.get("time"));
+		// An exception is thrown if the date given by 'controller.welcome()' is later to de date 'now'
+		assertThat(date.after(now), is(false));
 
     }
 }
