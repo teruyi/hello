@@ -8,6 +8,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /*
  * This annotation indicates that HelloController takes the 
@@ -26,16 +27,16 @@ public class HelloController {
 	 * know which Controller or which Controller’s method must
 	 * each http customer call be addressed to. In this case,
 	 * we are informing that every http customer call to the
-	 * homepage is going to be managed by the public method
+	 * homepage, which was a request of GET kind,
+         * is going to be managed by the public method
 	 * named “welcome” of our Controller.
 	 */
-	@RequestMapping("/")
+	@RequestMapping(value="/", method=RequestMethod.GET)
 	
 	
 	/**
-	* It is called when a HTTP request is made to the root path, as indicated by
-	* @RequestMapping("/") annotation. In this case, HTTP method is not specified, 
-	* so it will be called regardless the used method.
+	* It is called when a HTTP request is made to the root path and the request was 
+        * GET kind , as indicated @RequestMapping(value="/", method=RequestMethod.GET)
 	* 
 	* In addition, it makes two new entries in the Map of Strings (as key)
 	* and Objects (as value) passed by parameter. The first one has the key “time”, and
@@ -61,5 +62,17 @@ public class HelloController {
 			the main app resources */
 		model.put("message", message);
 		return "welcome";
+	}
+	
+	/**
+	* It is called when a HTTP request is made to the root path and the request was 
+        * GET kind , as indicated @RequestMapping(value="/", method=RequestMethod.GET)
+        *
+ 	* @return The name of the view responsible for rendering the HTML page. 
+	* As "userdata" is returned, "userdata.jsp" file will render the page.
+	*/
+	@RequestMapping(value="/", method=RequestMethod.POST)
+	public String userdata(){
+		return "userdata";
 	}		
 }
