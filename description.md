@@ -65,13 +65,12 @@ If you are not able to merge your improvements on the code with your updated res
   * When there is a conflict, you will see on the console where it is (There may be more than one).
 * Now you need to open the file in conflict with any text editor and you will see that some words have appeared in this file and it will have the next format:
 
-	any content
-	<<<<< HEAD  
-	your content  
-	=====  
-	other content
-	 
-	 \>>>>>upstream/master
+        any content
+        <<<<< HEAD  
+        your content
+         =====  
+        other content 
+        >>>>>upstream/master
  
 As you can see, `your content`  refers to what you wrote, and `other content` refers to what other people wrote, the rest added are conflict markers. Here you have a few options; you can keep your changes by
 deleting `other content` , you can use `other content` instead of `your content` or you can make a new change. You always need to keep on mind the option you take must satisfy both parts, you and them, and it must make sense. Then you can delete the conflict markers.

@@ -14,7 +14,7 @@ User name | NIA | Travis-CI|CodeCov|Score
 [Iñigo Alonso Ruiz](https://github.com/shathe/hello)| 665959 | [![Build Status](https://travis-ci.org/Shathe/hello.svg)](https://travis-ci.org/Shathe/hello)
 [Ismael Rodríguez Hernández](https://github.com/ismaro3/hello)| 587429 | [![Build Status](https://travis-ci.org/ismaro3/hello.svg)](https://travis-ci.org/ismaro3/hello)
 Jorge Martinez Lascorz | 571735 | [![Build Status](https://travis-ci.org/JorgeCoke/hello.svg)](https://travis-ci.org/JorgeCoke/hello)
-David Nicuesa Aranda | 653224 | [![Build Status](https://travis-ci.org/Nicu1309/hello.svg)](https://travis-ci.org/Nicu1309/hello)
+[David Nicuesa Aranda](https://travis-ci.org/Nicu1309/hello) | 653224 | [![Build Status](https://travis-ci.org/Nicu1309/hello.svg)](https://travis-ci.org/Nicu1309/hello)
 [EduIbanez](https://github.com/EduIbanez/hello) | 528074 | [![Build Status](https://travis-ci.org/EduIbanez/hello.svg)](https://travis-ci.org/EduIbanez/hello)
 [Sergio Soro Miranda](https://github.com/teruyi/hello) | 671250 | [![Build Status](https://travis-ci.org/teruyi/hello.svg)](https://travis-ci.org/teruyi/hello)
 Alberto Álvarez Aldea | 681687 | [![Build Status](https://travis-ci.org/albert17/hello.svg)](https://travis-ci.org/albert17/hello)

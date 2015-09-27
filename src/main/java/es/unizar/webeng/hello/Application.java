@@ -40,7 +40,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 /*
 * The @EnableScheduling annonation allows the application to run methods defined as @Scheduled
-*  which means executing task periodically
+*  which means executing task periodically.
 */
 @EnableScheduling
 public class Application extends SpringBootServletInitializer {
