@@ -6,7 +6,8 @@
 /.settings/
 /.classpath
 /.project
-/dist/ #Production code for Heroku
+/dist/
+/gradle/
 
 #VIM buffer files
 .*.swp
