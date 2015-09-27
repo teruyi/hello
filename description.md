@@ -51,6 +51,9 @@ Testing your code is very easy.
 
 The later command will compile normal and tests classes in your project. Then test classes will be executed and tested.
 Error message will appear in the screen if something has gone wrong.
+
+####Code coverage
+Code coverage is measured with JaCoCo in gradle. After tests are run, a task called jacocoTestReport is run and some reports are generated under /build/reports/jacoco/test.
 	
 ###Conflicts on merge process?
 If you are not able to merge your improvements on the code with your updated respository, don't panic  and stop typing random commands, this may help you.  Once you have added and committed your local files you will have to synchronize your forked repository  with your upstream repository and here is where you might find conflicts in some of the files. Solving  this issues is easy:
@@ -149,6 +152,28 @@ In the case of Github, it allows you to set custom webhooks so, when something h
 
 This is how Travis works. Travis set up a webhook on your repository, so when your code changes, Travis servers receive a request and then, build your updated code. Although Travis works with Github, if they add support for custom webhooks, it would be easy to create your owns (You would have only to make HTTP requests to Travis). 
 
+###Adding code coverage measure
+
+[![codecov.io](http://codecov.io/github/UNIZAR-30246-WebEngineering/hello/coverage.svg?branch=master)](http://codecov.io/github/UNIZAR-30246-WebEngineering/hello?branch=master)
+
+Since we are using JaCoCo to calculate code coverage in this project and Travis
+CI doesn't support this tool, we have to use an external tool called codecov in
+order to see the reports of code coverage. To use this tool, we must simply sign
+up in https://codecov.io with our github account and grant access to the
+repository. Once done, we have to add these lines to our .travis.yml file:
+```
+before_install:
+  - pip install --user codecov
+after_success:
+  - codecov
+```
+And it's done! Now we have access to the code coverage reports on codecov's page.
+
+Besides, codecov also supports badges with code coverage measures with this code:
+```
+[![codecov.io](http://codecov.io/github/UNIZAR-30246-WebEngineering/hello/coverage.svg?branch=master)](http://codecov.io/github/UNIZAR-30246-WebEngineering/hello?branch=master)
+```
+(This code is for Markdown files. For HTML or other languages, check [codecov's site](https://codecov.io))
 
 ###gitignore
 

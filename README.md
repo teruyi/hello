@@ -25,3 +25,4 @@ Adrian Susinos Moreno | 650220 | [![Build Status](https://travis-ci.org/ader9/he
 [Carlos Escuín Blasco](https://github.com/xarlieskin/hello) | 545003 | [![Build Status](https://travis-ci.org/xarlieskin/hello.svg)](https://travis-ci.org/xarlieskin/hello)
 [Alberto Revel] (https://github.com/albertorevel/hello) | 628704 | [![Build Status](https://travis-ci.org/albertorevel/hello.svg)](https://travis-ci.org/albertorevel/hello)
 [Raúl Piracés Alastuey](https://github.com/piraces/hello) | 490790 | [![Build Status](https://travis-ci.org/piraces/hello.svg)](https://travis-ci.org/piraces/hello)
+[Adrián Moreno Jimeno](https://github.com/Adriem/hello) | 631537 | [![Build Status](https://travis-ci.org/Adriem/hello.svg)](https://travis-ci.org/Adriem/hello)
