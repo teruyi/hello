@@ -83,6 +83,17 @@ public class UnitTest {
 		// An exception is thrown if the date given by 'controller.welcome()' is
 		// later to date 'now'
 		assertThat(date.after(now), is(false));
-
-	}
+ 	}
+	
+	/**
+	 * This test verificate the correct execution of the method "userdaata()"
+	 * @throws Exception
+	 */
+	@Test
+	public void testUserdata() throws Exception {
+	String view = controller.userdata();
+	// It checks that the message returned by 'controller.userdata()' is
+		// correct ("userdata")
+		assertThat(view, is("userdata"));
+ 	}
 }
