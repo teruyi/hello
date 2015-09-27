@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.Map;
 
 /* Imports the SpringFramework's libraries */
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +21,7 @@ public class HelloController {
 	
 	private int countReq = 0;	//Request counter
 	private int secondsRunning = 0;	//Seconds running the app
+	private static final Logger logger = LoggerFactory.getLogger(HelloController.class);
 	/*
     * This annotation is used to set a default value from properties file
 	*/
@@ -72,7 +75,7 @@ public class HelloController {
 	* The @Scheduled annotation indicates this method can be performed periodically according to
 	* the parameter that is assigned milliseconds.
 	*/
-	@Scheduled(fixedRate = 15000)
+	@Scheduled(fixedRate = 30000)
 
 	/** 
 	* This method shows on console information about the apps's execution such as the actual date,
@@ -80,9 +83,8 @@ public class HelloController {
 	* It is called every 15 seconds.
 	*/
 	public void infoServer(){
-		System.out.println(new Date() + ": Server has been running for " + secondsRunning + " seconds");
-		System.out.println(countReq + " resquests have been made since the server started");
-		System.out.println();
+		logger.info(new Date() + ": Server has been running for " + secondsRunning + " seconds");
+		logger.info(countReq + " resquests have been made since the server started");
 	}
 
 	/**
