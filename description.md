@@ -244,3 +244,12 @@ This is used in "welcome.jsp"
 
 ###Static content
 For convention in using Spring Boot, static content (images for example) is served in /src/main/resources/static classpath. In this web app, we use an imaged served in /src/main/resources/static/images/Head.png. We can call this image just with the /images/Head.png path, thanks to the facilities that Spring Boot provides us.
+
+###Logging
+Logging is the common method to collect information about the system's performance or any info we think is
+useful to evaluate how the system is working.
+This log system uses the features that SpringBoot includes. All the configuration for this system is placed
+in the logback.xml file where we can define which level we want our different loggers to be since we are
+using Logback. In addition, we make use of the SpringBoot's default configuration adding a log file which
+reference is the value of the field logging.file in application.properties. You can find more info about
+logback [here](logback.qos.ch).

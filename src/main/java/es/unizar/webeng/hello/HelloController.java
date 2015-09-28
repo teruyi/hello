@@ -22,6 +22,7 @@ public class HelloController {
 	
 	private int countReq = 0;	//Request counter
 	private int secondsRunning = 0;	//Seconds running the app
+	//Declares logger on this class
 	private static final Logger logger = LoggerFactory.getLogger(HelloController.class);
 	/*
     * This annotation is used to set a default value from properties file
@@ -81,6 +82,8 @@ public class HelloController {
 	*/
 	@RequestMapping(value="/", method=RequestMethod.POST)
 	public String userdata(){
+		//Each request to userdata page is counted
+		countReq += 1;
 		return "userdata";
 	}		
 
@@ -91,8 +94,9 @@ public class HelloController {
 	@Scheduled(fixedRate = 60000)
 
 	/** 
-	* This method sends log messages with information about the apps's execution such as the actual date,
-	* the time it has been running and the number of requests that have been made to the root page. 
+	* This method sends info level log messages with information about the apps's execution such 
+	* as the actual date, the time it has been running and the number of requests that have been 
+	* made to the root page. 
 	* It is called every minute.
 	*/
 	public void infoServer(){
