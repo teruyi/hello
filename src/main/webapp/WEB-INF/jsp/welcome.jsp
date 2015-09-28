@@ -21,7 +21,6 @@ Provides to the main JSP page of the project, a simple way to make the client-si
 	Check Glyphicon section on description.md for more information-->
 	<div>
 		<span class="glyphicon glyphicon-time" ><kbd> ${time}</kbd></span><br>
-		<span class="glyphicon glyphicon-user" ><kbd> ${message}</kbd></span><br>
 		<!--Shows the IP addres of the client-->
 		<span class="glyphicon glyphicon-info-sign" ><kbd> <%out.println("IP:" + request.getRemoteAddr()); %></kbd></span><br>
 		<!--Shows the Info System of the client-->
