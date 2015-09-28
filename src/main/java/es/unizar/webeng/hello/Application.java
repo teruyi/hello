@@ -57,6 +57,7 @@ public class Application extends SpringBootServletInitializer {
 		SpringApplication.run(Application.class, args);
 	}
 
+
 	@Override
 	/**
 	 * Overwrite configure method in order to customize the configuration of
