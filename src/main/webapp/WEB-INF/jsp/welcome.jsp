@@ -31,10 +31,10 @@ Provides to the main JSP page of the project, a simple way to make the client-si
 	<h3>Complete with your dates:</h3>
 	<!-- Formulary which a user can write and send to the server. All the params are required-->
 	<form action="/" method="POST">
-	Name: <input type="text" name="name" required><br />
-	Age: <input type="text" name="age" required><br />
-	Curse: <input type="text" name="curse" required><br />
-	Speciality: <input type="text" name="speciality" required><br />
+	<span class="label label-default">Name: </span><input type="text" class="form-control" name="name" required><br />
+	<span class="label label-default">Age: </span><input type="text" class="form-control" name="age" required><br />
+	<span class="label label-default">Curse: </span><input type="text" class="form-control" name="curse" required><br />
+	<span class="label label-default">Speciality: </span><input type="text" class="form-control" name="speciality" required><br />
 	<input type="submit" value="Send" />
 </form>
 
