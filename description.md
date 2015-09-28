@@ -27,7 +27,7 @@ The project follows the recommended conventions about packaging and directories 
              |--unizar
                |--webeng
                   |--hello
-                     |--IntegrationTests.java 
+                     |--IntegrationTests.java
                      |--SystemTests.java
                      |--UnitTest.java
 
@@ -43,9 +43,9 @@ Assuming that you have set up gradle in your computer type in your console:
 
 	$ cd hello
 	$ gradle build
-	
+
 ###Testing your code
-Testing your code is very easy. 
+Testing your code is very easy.
 
 	$ cd hello
 	$ gradle test
@@ -67,9 +67,9 @@ If you are not able to merge your improvements on the code with your updated res
 
 ```
     any content
-    <<<<< HEAD  
-    your content  
-    =====  
+    <<<<< HEAD
+    your content
+    =====
     other content
     \>>>>>upstream/master
 ```
@@ -188,7 +188,7 @@ It allows to those third-party services to easily know when a change has been ma
 
 In the case of Github, it allows you to set custom webhooks so, when something happens in your repository (like a pull, push) , an HTTP POST is made to the provided URL. It is very useful for [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) tools, like Travis. To view what webhooks are set-up on your repository, go to Settings -> Webhook & Services.
 
-This is how Travis works. Travis set up a webhook on your repository, so when your code changes, Travis servers receive a request and then, build your updated code. Although Travis works with Github, if they add support for custom webhooks, it would be easy to create your own (You would have only to make HTTP requests to Travis). 
+This is how Travis works. Travis set up a webhook on your repository, so when your code changes, Travis servers receive a request and then, build your updated code. Although Travis works with Github, if they add support for custom webhooks, it would be easy to create your owns (You would have only to make HTTP requests to Travis).
 
 ###Adding code coverage measure
 
@@ -238,15 +238,34 @@ This is used in HelloController.java
 We can obtain de client's IP address or the latest proxy which he used, using "request.getRemoteAddr()".
 This is used in "welcome.jsp"
 
-###Obtain client's System Information 
+###Obtain client's System Information
 We can obtain de client's IP system information, using "request.getHeader("User-Agent")".
 This is used in "welcome.jsp"
+
+
+###Using Branches
+A branch represent an independent line of devlopment which allows to isolate changes from the main line of
+development. Usually is used when a developer wants to add a new feature or fix a bug. He spawns a new branch to
+encapsulate the code's changes, which would make sure that unstable code is never commit to the main code.
+
+#####Usage
+* List all of the branches in the repository: <code>git branch</code>
+* Create a branch: <code>git branch <branch's name> </code>, this command only create a new branch, if you want
+  start adding commits to it, you need to select it.
+* Navigate between the differents branch in a proyect: <code>git checkout <branch's name></code>
+* Merge one branch with the current branch: <code>git merge <branch's name></code>
+* Delete a branch: <code> git branch -d <branch's name></code>
+
+Here is another interesting command that you can use:
+* Create a branch and move to it: <code>git checkout -b <branch's name></code>
+* See the differences between two branchs: <code>git diff --stat <branch 1> <branch 2></code>
+* Undo a merge: <code>git reset --hard HEAD</code>
 
 
 ##Heroku
 
 ### What is it?
-Heroku is a cloud-platform for automatic deployment. 
+Heroku is a cloud-platform for automatic deployment.
 Every time your code changes in your GitHub repository, Heroku notices it, builds your app and deploys it on the cloud; you only have to push your changes.
 With this tool, everybody can see the status of your project without having to build and run it locally.
 
