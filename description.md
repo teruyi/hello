@@ -64,6 +64,7 @@ If you are not able to merge your improvements on the code with your updated res
 * Identifying the conflict:
   * When there is a conflict, you will see on the console where it is (There may be more than one).
 * Now you need to open the file in conflict with any text editor and you will see that some words have appeared in this file and it will have the next format:
+
 ```
     any content
     <<<<< HEAD
@@ -72,6 +73,7 @@ If you are not able to merge your improvements on the code with your updated res
     other content
     \>>>>>upstream/master
 ```
+
 As you can see, `your content`  refers to what you wrote, and `other content` refers to what other people wrote, the rest added are conflict markers. Here you have a few options; you can keep your changes by
 deleting `other content` , you can use `other content` instead of `your content` or you can make a new change. You always need to keep on mind the option you take must satisfy both parts, you and them, and it must make sense. Then you can delete the conflict markers.
 
@@ -147,6 +149,8 @@ You may find some [Spring Java annotations](http://docs.spring.io/spring/docs/cu
 * **@Value("${property:default_value}"): if the specified property exists, its value is assigned to a variable. Otherwise, the default value is assigned to that variable. It must be a variable annotation.
 * **@Before**: declares that a function should be executed before running the tests. It must be a function annotation.
 * **@Test**: declares that a function is a test. It must be a function annotation.
+* **@Scheduled**: declares that a function is going to be executed periodically.
+* **@EnableScheduling**: declares that an application can run programmed tasks.
 
 ##Java Anotations
 Java defines a set of annotations that are built into the language.
@@ -256,3 +260,53 @@ Here is another interesting command that you can use:
 * Create a branch and move to it: <code>git checkout -b <branch's name></code>
 * See the differences between two branchs: <code>git diff --stat <branch 1> <branch 2></code>
 * Undo a merge: <code>git reset --hard HEAD</code>
+
+
+##Heroku
+
+### What is it?
+Heroku is a cloud-platform for automatic deployment.
+Every time your code changes in your GitHub repository, Heroku notices it, builds your app and deploys it on the cloud; you only have to push your changes.
+With this tool, everybody can see the status of your project without having to build and run it locally.
+
+###Set-up Heroku in your repo
+1. Register on [www.heroku.com](http://www.heroku.com) and create a new App.
+2. Connect it to your Github repo and enable "Automatic Deploys".
+3. Put your Heroku App URL on the README.md table
+4. Done!
+
+###How does it work?
+ 1. You made a push to your github repository.
+ 2. Using webhooks, Heroku notices it.
+ 3. Heroku executes "stage" task of the build.gradle file (It builds the project and generates production code)
+ 4. Heroku reads "Procfile" file in order to know how to execute your app.
+ 5. Voila! Your app is running on the cloud.
+
+###Project changes
+
+A few changes have been made on the project files to allow it.
+
+**build.gradle:**
+
+A "stage" task has been added. This tasks fires the "build" and "installApp" tasks. "installApp" task  generates production-ready files on "/dist" directory. This directory contains .jar files and a bash script file that is used to bootstrap the application.
+
+**Procfile:**
+
+In this file, we tell Heroku how to run our app. In this case, it executes the bash script file in "dist/bin" as a web app.
+
+**settings.gradle:**
+
+This file has been added in order to specify the project name. Without it, "installApp" task doesn't work well.
+
+
+##Static content
+For convention in using Spring Boot, static content (images for example) is served in /src/main/resources/static classpath. In this web app, we use an imaged served in /src/main/resources/static/images/Head.png. We can call this image just with the /images/Head.png path, thanks to the facilities that Spring Boot provides us.
+
+###Logging
+Logging is the common method to collect information about the system's performance or any info we think is
+useful to evaluate how the system is working.
+This log system uses the features that SpringBoot includes. All the configuration for this system is placed
+in the logback.xml file where we can define which level we want our different loggers to be since we are
+using Logback. In addition, we make use of the SpringBoot's default configuration adding a log file which
+reference is the value of the field logging.file in application.properties. You can find more info about
+logback [here](logback.qos.ch).
