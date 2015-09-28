@@ -184,7 +184,7 @@ It allows to those third-party services to easily know when a change has been ma
 
 In the case of Github, it allows you to set custom webhooks so, when something happens in your repository (like a pull, push) , an HTTP POST is made to the provided URL. It is very useful for [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) tools, like Travis. To view what webhooks are set-up on your repository, go to Settings -> Webhook & Services.
 
-This is how Travis works. Travis set up a webhook on your repository, so when your code changes, Travis servers receive a request and then, build your updated code. Although Travis works with Github, if they add support for custom webhooks, it would be easy to create your owns (You would have only to make HTTP requests to Travis). 
+This is how Travis works. Travis set up a webhook on your repository, so when your code changes, Travis servers receive a request and then, build your updated code. Although Travis works with Github, if they add support for custom webhooks, it would be easy to create your own (You would have only to make HTTP requests to Travis). 
 
 ###Adding code coverage measure
 
@@ -238,5 +238,43 @@ This is used in "welcome.jsp"
 We can obtain de client's IP system information, using "request.getHeader("User-Agent")".
 This is used in "welcome.jsp"
 
-###Static content
+
+##Heroku
+
+### What is it?
+Heroku is a cloud-platform for automatic deployment. 
+Every time your code changes in your GitHub repository, Heroku notices it, builds your app and deploys it on the cloud; you only have to push your changes.
+With this tool, everybody can see the status of your project without having to build and run it locally.
+
+###Set-up Heroku in your repo
+1. Register on [www.heroku.com](http://www.heroku.com) and create a new App.
+2. Connect it to your Github repo and enable "Automatic Deploys".
+3. Put your Heroku App URL on the README.md table
+4. Done!
+
+###How does it work?
+ 1. You made a push to your github repository.
+ 2. Using webhooks, Heroku notices it.
+ 3. Heroku executes "stage" task of the build.gradle file (It builds the project and generates production code)
+ 4. Heroku reads "Procfile" file in order to know how to execute your app.
+ 5. Voila! Your app is running on the cloud.
+
+###Project changes
+
+A few changes have been made on the project files to allow it.
+
+**build.gradle:**
+
+A "stage" task has been added. This tasks fires the "build" and "installApp" tasks. "installApp" task  generates production-ready files on "/dist" directory. This directory contains .jar files and a bash script file that is used to bootstrap the application.
+
+**Procfile:**
+
+In this file, we tell Heroku how to run our app. In this case, it executes the bash script file in "dist/bin" as a web app.
+
+**settings.gradle:**
+
+This file has been added in order to specify the project name. Without it, "installApp" task doesn't work well.
+
+
+##Static content
 For convention in using Spring Boot, static content (images for example) is served in /src/main/resources/static classpath. In this web app, we use an imaged served in /src/main/resources/static/images/Head.png. We can call this image just with the /images/Head.png path, thanks to the facilities that Spring Boot provides us.
