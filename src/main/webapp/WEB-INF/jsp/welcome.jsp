@@ -31,17 +31,22 @@ Provides to the main JSP page of the project, a simple way to make the client-si
 	<h3>Complete with your dates:</h3>
 	<!-- Formulary which a user can write and send to the server. All the params are required-->
 	<form action="/" method="POST">
+<div class="input-group">
 <span class="input-group-addon" >Name</span>
-  <input type="text" class="form-control" placeholder="What's your name?" name="name" required>
+  <input type="text" class="form-control" placeholder="What's your name?" name="name" required></div></div>
 <br/>
+
+<div class="input-group">
 <span class="input-group-addon" >Age</span>
-  <input type="text" class="form-control" placeholder="What's age?" name="age" required>
+  <input type="text" class="form-control" placeholder="What's age?" name="age" required></div>
 <br/>
+<div class="input-group">
 <span class="input-group-addon" >Curse</span>
-  <input type="text" class="form-control" placeholder="What curse are you in?" name="curse" required>
+  <input type="text" class="form-control" placeholder="What curse are you in?" name="curse" required></div>
 <br/>
+<div class="input-group">
 <span class="input-group-addon" >Speciality</span>
-  <input type="text" class="form-control" placeholder="What speciality are you in?" name="speciality" required>
+  <input type="text" class="form-control" placeholder="What speciality are you in?" name="speciality" required></div>
 <br/>
 	<input type="submit" value="Send" />
 </form>
