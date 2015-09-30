@@ -16,7 +16,7 @@ User name | NIA | Travis-CI|CodeCov|Heroku|Score
 Jorge Martinez Lascorz | 571735 | [![Build Status](https://travis-ci.org/JorgeCoke/hello.svg)](https://travis-ci.org/JorgeCoke/hello)
 [David Nicuesa Aranda](https://travis-ci.org/Nicu1309/hello) | 653224 | [![Build Status](https://travis-ci.org/Nicu1309/hello.svg)](https://travis-ci.org/Nicu1309/hello)
 [EduIbanez](https://github.com/EduIbanez/hello) | 528074 | [![Build Status](https://travis-ci.org/EduIbanez/hello.svg)](https://travis-ci.org/EduIbanez/hello)
-[Sergio Soro Miranda](https://github.com/teruyi/hello) | 671250 | [![Build Status](https://travis-ci.org/teruyi/hello.svg)](https://travis-ci.org/teruyi/hello)
+[Sergio Soro Miranda](https://github.com/teruyi/hello) | 671250 | [![Build Status](https://travis-ci.org/teruyi/hello.svg)](https://travis-ci.org/teruyi/hello) | [![codecov.io](http://codecov.io/github/teruyi/hello/coverage.svg?branch=master)](http://codecov.io/github/teruyi/hello?branch=master)  | [App](http://teruyi-hello.herokuapp.com/)
 Alberto Álvarez Aldea | 681687 | [![Build Status](https://travis-ci.org/albert17/hello.svg)](https://travis-ci.org/albert17/hello)
 [Oscar Clemente Pedrico] (https://github.com/OscarClemente/hello) | 530162 | [![Build Status](https://travis-ci.org/OscarClemente/hello.svg)](https://travis-ci.org/OscarClemente/hello)
 [Iñigo Gascón Royo] (https://github.com/Gascon95/hello) | 685215 | [![Build Status](https://travis-ci.org/Gascon95/hello.svg)](https://travis-ci.org/Gascon95/hello)
